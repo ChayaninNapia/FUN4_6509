@@ -67,7 +67,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/example_description" TYPE PROGRAM FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/dummy_script.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/example_description" TYPE PROGRAM FILES
+    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/dummy_script.py"
+    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/jointstate_script.py"
+    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/workspace_marker.py"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
