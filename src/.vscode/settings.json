@@ -1,0 +1,36 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_configs_utils/lib/python3.10/site-packages",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/srdfdom/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/launch_param_builder/lib/python3.10/site-packages",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/example_description/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/Documents/ros2_action_ws/install/example_description/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/Documents/ros2_action_ws/install/actions_ros/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/Documents/ros2_action_ws/install/action_interface/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/HW1_ws/exam1/install/turtlesim_plus_interfaces/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/HW1_ws/exam1/install/turtlesim_plus/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/HW1_ws/exam1/install/turtle_exam1/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/HW1_ws/exam1/install/custom_interface/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_configs_utils/lib/python3.10/site-packages",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/srdfdom/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/launch_param_builder/lib/python3.10/site-packages",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/example_description/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/Documents/ros2_action_ws/install/example_description/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/Documents/ros2_action_ws/install/actions_ros/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/Documents/ros2_action_ws/install/action_interface/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/HW1_ws/exam1/install/turtlesim_plus_interfaces/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/HW1_ws/exam1/install/turtlesim_plus/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/HW1_ws/exam1/install/turtle_exam1/local/lib/python3.10/dist-packages",
+        "/home/chayanin09/HW1_ws/exam1/install/custom_interface/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

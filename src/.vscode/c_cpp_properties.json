@@ -1,0 +1,57 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/chayanin09/Documents/robot_modelling_ws/install/pilz_industrial_motion_planner_testutils/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/pilz_industrial_motion_planner/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_visual_tools/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_task_constructor_visualization/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_task_constructor_demo/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_task_constructor_core/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_ros_control_interface/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_simple_controller_manager/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_setup_assistant/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_setup_srdf_plugins/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_setup_core_plugins/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_setup_controllers/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_setup_app_plugins/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_setup_framework/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_servo/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_ros_visualization/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_hybrid_planning/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_ros_planning_interface/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_ros_benchmarks/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_ros_warehouse/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_ros_robot_interaction/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_ros_perception/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_ros_move_group/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_planners_ompl/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_ros_planning/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_ros_occupancy_map_monitor/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_kinematics/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/chomp_motion_planner/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_core/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/srdfdom/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/rviz_marker_tools/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/rosparam_shortcuts/include/**",
+        "/home/chayanin09/Documents/robot_modelling_ws/install/moveit_task_constructor_msgs/include/**",
+        "/home/chayanin09/Documents/ros2_action_ws/install/action_interface/include/**",
+        "/home/chayanin09/HW1_ws/exam1/install/turtlesim_plus_interfaces/include/**",
+        "/home/chayanin09/HW1_ws/exam1/install/custom_interface/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/RoboticsDev2024/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
