@@ -1,0 +1,100 @@
+[0.011s] Invoking command in '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/example_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chayanin09/Documents/robot_modelling_ws/install/moveit_configs_utils:/home/chayanin09/Documents/robot_modelling_ws/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake /home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description -DCMAKE_INSTALL_PREFIX=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description
+[0.071s] -- The C compiler identification is GNU 11.4.0
+[0.122s] -- The CXX compiler identification is GNU 11.4.0
+[0.127s] -- Detecting C compiler ABI info
+[0.189s] -- Detecting C compiler ABI info - done
+[0.196s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.196s] -- Detecting C compile features
+[0.196s] -- Detecting C compile features - done
+[0.198s] -- Detecting CXX compiler ABI info
+[0.279s] -- Detecting CXX compiler ABI info - done
+[0.285s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.285s] -- Detecting CXX compile features
+[0.285s] -- Detecting CXX compile features - done
+[0.290s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.416s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.506s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.556s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.564s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.573s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.587s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.605s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.656s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.661s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.779s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.801s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.836s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.859s] -- Looking for pthread.h
+[0.930s] -- Looking for pthread.h - found
+[0.931s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.005s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.006s] -- Found Threads: TRUE  
+[1.047s] -- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+[1.154s] -- Configuring done
+[1.158s] -- Generating done
+[1.159s] -- Build files have been written to: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/example_description
+[1.166s] Invoked command in '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/example_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chayanin09/Documents/robot_modelling_ws/install/moveit_configs_utils:/home/chayanin09/Documents/robot_modelling_ws/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake /home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description -DCMAKE_INSTALL_PREFIX=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description
+[1.166s] Invoking command in '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/example_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chayanin09/Documents/robot_modelling_ws/install/moveit_configs_utils:/home/chayanin09/Documents/robot_modelling_ws/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/example_description -- -j20 -l20
+[1.223s] [ 50%] [32mBuilding CXX object CMakeFiles/cpp_node_test.dir/src/cpp_node.cpp.o[0m
+[1.232s] [ 50%] Built target ament_cmake_python_copy_example_description
+[1.370s] [100%] [32m[1mLinking CXX executable cpp_node_test[0m
+[1.388s] running egg_info
+[1.388s] creating example_description.egg-info
+[1.388s] writing example_description.egg-info/PKG-INFO
+[1.389s] writing dependency_links to example_description.egg-info/dependency_links.txt
+[1.389s] writing top-level names to example_description.egg-info/top_level.txt
+[1.389s] writing manifest file 'example_description.egg-info/SOURCES.txt'
+[1.390s] reading manifest file 'example_description.egg-info/SOURCES.txt'
+[1.390s] writing manifest file 'example_description.egg-info/SOURCES.txt'
+[1.411s] [100%] Built target ament_cmake_python_build_example_description_egg
+[1.436s] [100%] Built target cpp_node_test
+[1.448s] Invoked command in '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/example_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chayanin09/Documents/robot_modelling_ws/install/moveit_configs_utils:/home/chayanin09/Documents/robot_modelling_ws/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/example_description -- -j20 -l20
+[1.498s] Invoking command in '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/example_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chayanin09/Documents/robot_modelling_ws/install/moveit_configs_utils:/home/chayanin09/Documents/robot_modelling_ws/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --install /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/example_description
+[1.506s] -- Install configuration: ""
+[1.506s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/environment/pythonpath.sh
+[1.506s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/environment/pythonpath.dsv
+[1.506s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/local/lib/python3.10/dist-packages/example_description-0.0.0-py3.10.egg-info
+[1.506s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/local/lib/python3.10/dist-packages/example_description-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.506s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/local/lib/python3.10/dist-packages/example_description-0.0.0-py3.10.egg-info/PKG-INFO
+[1.506s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/local/lib/python3.10/dist-packages/example_description-0.0.0-py3.10.egg-info/top_level.txt
+[1.506s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/local/lib/python3.10/dist-packages/example_description-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.506s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/local/lib/python3.10/dist-packages/example_description
+[1.506s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/local/lib/python3.10/dist-packages/example_description/__init__.py
+[1.506s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/local/lib/python3.10/dist-packages/example_description/dummy_module.py
+[1.529s] Listing '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/local/lib/python3.10/dist-packages/example_description'...
+[1.529s] Compiling '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/local/lib/python3.10/dist-packages/example_description/__init__.py'...
+[1.529s] Compiling '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/local/lib/python3.10/dist-packages/example_description/dummy_module.py'...
+[1.531s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/dummy_script.py
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/cpp_node_test
+[1.532s] -- Set runtime path of "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/cpp_node_test" to ""
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/config
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/config/display.rviz
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/launch
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/launch/fun.launch.py
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/launch/simple_display.launch.py
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes/link_2.stl
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes/link_0.stl
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes/link_3.stl
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes/end_effector.stl
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes/link_1.stl
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/robot
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/robot/visual
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/robot/visual/my-robot.xacro
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/robot/visual/01-myfirst.urdf
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/ament_index/resource_index/package_run_dependencies/example_description
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/ament_index/resource_index/parent_prefix_path/example_description
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/environment/ament_prefix_path.sh
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/environment/ament_prefix_path.dsv
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/environment/path.sh
+[1.532s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/environment/path.dsv
+[1.533s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/local_setup.bash
+[1.533s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/local_setup.sh
+[1.533s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/local_setup.zsh
+[1.533s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/local_setup.dsv
+[1.533s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/package.dsv
+[1.533s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/ament_index/resource_index/packages/example_description
+[1.533s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/cmake/example_descriptionConfig.cmake
+[1.533s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/cmake/example_descriptionConfig-version.cmake
+[1.533s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/package.xml
+[1.534s] Invoked command in '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/example_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chayanin09/Documents/robot_modelling_ws/install/moveit_configs_utils:/home/chayanin09/Documents/robot_modelling_ws/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --install /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/example_description
