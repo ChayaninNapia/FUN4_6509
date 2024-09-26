@@ -8,6 +8,7 @@ from spatialmath import *
 import numpy as np
 from std_msgs.msg import Bool
 
+
 class WorkspaceNode(Node):
     def __init__(self):
         super().__init__('workspace_move_node')

@@ -31,6 +31,8 @@ install(PROGRAMS
   scripts/jointstate_script.py
   scripts/workspace_marker.py
   scripts/workspace_move.py
+  scripts/random_position.py
+  scripts/random_controller.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

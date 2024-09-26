@@ -72,6 +72,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/jointstate_script.py"
     "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/workspace_marker.py"
     "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/workspace_move.py"
+    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/random_position.py"
+    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/random_controller.py"
     )
 endif()
 
