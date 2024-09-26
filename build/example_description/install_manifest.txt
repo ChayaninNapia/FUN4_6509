@@ -14,7 +14,7 @@
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/config/my_display.rviz
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/config/display.rviz
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/launch/fun.launch.py
-/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/launch/simple_display.launch.py
+/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/launch/workspace_plot_display.launch.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes/link_2.stl
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes/link_0.stl
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes/link_3.stl
