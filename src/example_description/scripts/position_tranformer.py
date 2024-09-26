@@ -73,8 +73,6 @@ class PositionTranformerNode(Node):
         self.joint_pub.publish(msg)
 
     def joint_state_callback(self, msg):
-        # Update self.q with the current joint positions from the JointState message
-        # Assuming you have 3 joints and the message contains the relevant joint data
         if len(msg.position) >= 3:
             self.current_q = list(msg.position[:3])  # Get the first three joint positions
             # self.get_logger().info(f"Current joint positions: {self.current_q}")

@@ -9,6 +9,7 @@
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/dummy_script.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/jointstate_script.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/workspace_marker.py
+/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/workspace_move.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/cpp_node_test
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/config/my_display.rviz
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/config/display.rviz

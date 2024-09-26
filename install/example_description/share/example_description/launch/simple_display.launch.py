@@ -49,17 +49,17 @@ def generate_launch_description():
         executable='joint_state_publisher_gui'
     )
     
-    joint_state_script = Node(
-        package='example_description',  
-        executable='jointstate_script.py',  
-        name='jointstate_script',
-        parameters=[]
-    )
-    
     workspace_marker = Node(
         package='example_description',  
         executable='workspace_marker.py',  
         name='workspace_marker',
+        parameters=[]
+    )
+    
+    workspace_move = Node(
+        package='example_description',  
+        executable='workspace_move.py',  
+        name='workspace_move',
         parameters=[]
     )
 
@@ -67,8 +67,8 @@ def generate_launch_description():
     
     launch_description.add_action(rviz)
     launch_description.add_action(robot_state_publisher)
-    # launch_description.add_action(joint_state_script)
-    # launch_description.add_action(workspace_marker)
+    launch_description.add_action(workspace_marker)
+    # launch_description.add_action(workspace_move)
     launch_description.add_action(joint_state_publisher_gui)
     
     return launch_description

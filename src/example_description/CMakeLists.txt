@@ -30,6 +30,7 @@ install(PROGRAMS
   scripts/dummy_script.py
   scripts/jointstate_script.py
   scripts/workspace_marker.py
+  scripts/workspace_move.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
