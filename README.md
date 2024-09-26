@@ -105,4 +105,9 @@ Verification :
 ros2 launch example_description workspace_plot_display.launch.py
 ```
  <img src="src/img/workspace_plot1.png" alt="Alt Text for the Image" width="500" />
+
+ ### 2.สร้าง node สําหรับสุ่มเป้าหมายตําแหน่งปลายมือภายใน workspace ของแขนกลใน topic ที่มีชื่อว่า /target (msg type: PoseStamped) และแสดงผลผ่าน RVIZ2 (0.5 คะแนน)
+ ```sh
+ros2 launch example_description random_task.launch.py 
+```
       
