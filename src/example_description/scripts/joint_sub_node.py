@@ -5,25 +5,24 @@ from rclpy.node import Node
 from tf2_ros import Buffer, TransformListener
 from geometry_msgs.msg import TransformStamped
 import numpy as np
-import tf_transformations  # Make sure to install the tf_transformations package
+import tf_transformations
+from geometry_msgs.msg import PoseStamped
 
 class TFSubscriber(Node):
     def __init__(self):
-        super().__init__('tf_subscriber')
+        super().__init__('end_effector_subscriber_node')
 
-        # Create a buffer and listener to receive TF2 transforms
+        
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
+        self.pose_pub = self.create_publisher(PoseStamped, '/end_effector', 10)
 
-        # Timer to call the callback periodically
-        self.timer = self.create_timer(0.1, self.get_transform)  # 1.0 seconds
+        
+        self.timer = self.create_timer(0.1, self.get_transform)  
 
     def get_transform(self):
         try:
-            # Lookup the transform between 'link_0' and 'end_effector'
             transform = self.tf_buffer.lookup_transform('link_0', 'end_effector', rclpy.time.Time())
-
-            # Print the full transformation matrix
             self.print_transform_matrix(transform)
 
         except Exception as e:
@@ -33,16 +32,20 @@ class TFSubscriber(Node):
         translation = transform.transform.translation
         rotation = transform.transform.rotation
 
-        # Convert quaternion to rotation matrix
         quaternion = [rotation.x, rotation.y, rotation.z, rotation.w]
         rotation_matrix = tf_transformations.quaternion_matrix(quaternion)
 
-        # Add translation to the rotation matrix to form the full transformation matrix
         rotation_matrix[0, 3] = translation.x
         rotation_matrix[1, 3] = translation.y
         rotation_matrix[2, 3] = translation.z
 
-        # Print the transformation matrix
+        msg = PoseStamped()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = "link_0"
+        msg.pose.position.x = translation.x
+        msg.pose.position.y = translation.y
+        msg.pose.position.z = translation.z
+        self.pose_pub.publish(msg)
         self.get_logger().info("Transformation Matrix:")
         self.get_logger().info(f"\n{rotation_matrix}")
 

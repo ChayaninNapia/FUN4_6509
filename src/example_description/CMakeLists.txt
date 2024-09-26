@@ -33,6 +33,7 @@ install(PROGRAMS
   scripts/workspace_move.py
   scripts/random_position.py
   scripts/random_controller.py
+  scripts/joint_sub_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
