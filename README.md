@@ -100,5 +100,9 @@ Verification :
 ```
 
 ### plot workpace with rviz marker
+
+```sh
+ros2 launch example_description workspace_plot_display.launch.py
+```
  <img src="src/img/workspace_plot1.png" alt="Alt Text for the Image" width="500" />
       
