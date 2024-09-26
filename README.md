@@ -3,17 +3,17 @@
 ### 1.หา workspace ของแขนกลพร้อมวิธีการตรวจสอบคําตอบ (1 คะแนน)
 - คำนวณสมการ inverse kinematic ของ หุ่นยนต์เพื่อตรวจสอบ task workspace
   - หา q1
-<img src="img/q1_find.jpeg" alt="Alt Text for the Image" width="500" />
+<img src="src/img/q1_find.jpeg" alt="Alt Text for the Image" width="500" />
       - เนื่องจาก ปลายแขน เทียบกับ link 0 origin ของ end-effector จะมี offset แกน z ไป -0.02 ดังนั้นจึงต้องบวกมุมกลับเข้าไปถึงจะทำให้หุ่นหันหน้าตรงถูก
-<img src="img/q1_extra.jpeg" alt="Alt Text for the Image" width="500" />
+<img src="src/img/q1_extra.jpeg" alt="Alt Text for the Image" width="500" />
       - หา q2
-<img src="img/q2_find.jpeg" alt="Alt Text for the Image" width="700" />
+<img src="src/img/q2_find.jpeg" alt="Alt Text for the Image" width="700" />
       - หา q3
-<img src="img/q3_find.jpeg" alt="Alt Text for the Image" width="600" />
+<img src="src/img/q3_find.jpeg" alt="Alt Text for the Image" width="600" />
       - มุมที่หา เป็นมุมที่เทียบกับแกน X แต่ ต้องทำให้เป็นเทียบกับแกน Z เพื่อให้ตรงกับ joint ของ urdf
-<img src="img/q3_extra.jpeg" alt="Alt Text for the Image" width="600" />
+<img src="src/img/q3_extra.jpeg" alt="Alt Text for the Image" width="600" />
     - ค่า X <= l3 + l5, Y <= l3 + l5, Z <= l1 + l3 +l5
-      <img src="img/boundary.jpeg" alt="Alt Text for the Image" width="500" />
+      <img src="src/img/boundary.jpeg" alt="Alt Text for the Image" width="500" />
       
 #### ตรวจคำตอบด้วย robotictoolbox
 
@@ -100,5 +100,5 @@ Verification :
 ```
 
 ### plot workpace with rviz marker
- <img src="img/workspace_plot1.png" alt="Alt Text for the Image" width="500" />
+ <img src="src/img/workspace_plot1.png" alt="Alt Text for the Image" width="500" />
       
