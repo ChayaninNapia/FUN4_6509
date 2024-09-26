@@ -99,3 +99,6 @@ Verification :
    0         0         0         1       
 ```
 
+### plot workpace with rviz marker
+ <img src="img/workspace_plot1.png" alt="Alt Text for the Image" width="500" />
+      
