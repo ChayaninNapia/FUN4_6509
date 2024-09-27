@@ -23,7 +23,6 @@ class JointStateFollower(Node):
             10
         )
 
-        # Initialize the robot model with 4 joints
         self.robot = rtb.DHRobot(
             [
                 rtb.RevoluteMDH(d=0.2, alpha=0, offset=0),           # Joint 1
@@ -34,10 +33,10 @@ class JointStateFollower(Node):
             name="robot"
         )
 
-        # Define joint names for the first three joints
+       
         self.joint_names = ["joint_1", "joint_2", "joint_3"]
 
-        # Initialize current joint state (for potential future use)
+       
         self.current_joint_state = [0.0, 0.0, 0.0]
 
         self.get_logger().info('Joint State Follower Node has been started.')
@@ -46,32 +45,25 @@ class JointStateFollower(Node):
 
         self.get_logger().info('Received new target pose.')
 
-        # Extract position from PoseStamped
+ 
         x = msg.pose.position.x
         y = msg.pose.position.y
         z = msg.pose.position.z
 
-        # Create desired_pose with only translation (ignore orientation)
+       
         desired_pose = SE3(x, y, z)
-
-        # Define the mask: [x, y, z, roll, pitch, yaw]
-        mask = [1, 1, 1, 0, 0, 0]  # Only consider translation
-
-        # Compute inverse kinematics
+        mask = [1, 1, 1, 0, 0, 0]  
         solution = self.robot.ikine_LM(desired_pose, mask=mask)
 
-        if solution.success:
-            # Extract the first three joint angles
+        if solution.success:      
             q_ik = solution.q[:3]
             self.get_logger().info(f"IK Solution found: {q_ik}")
-
-            # Create JointState message
+      
             joint_msg = JointState()
             joint_msg.header.stamp = self.get_clock().now().to_msg()
             joint_msg.name = self.joint_names
             joint_msg.position = q_ik.tolist()
 
-            # Publish the JointState message
             self.joint_pub.publish(joint_msg)
             self.get_logger().info("Published joint states for joint_1, joint_2, joint_3.")
         else:
