@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="example">
+
+  <!-- Link 0 (Base link) -->
+  <link name="link_0">
+    <visual>
+      <geometry>
+        <mesh filename="file:///$(find example_description)/meshes/link_0.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.06" length="0.2"/> <!-- Base link with radius 60mm, height 200mm -->
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Link 1 -->
+  <link name="link_1">
+    <visual>
+      <geometry>
+        <mesh filename="file:///$(find example_description)/meshes/link_1.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.1"/> <!-- Link 1 with radius 50mm, length 100mm -->
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joint 1 -->
+  <joint name="joint_1" type="revolute">
+    <parent link="link_0"/>
+    <child link="link_1"/>
+    <origin xyz="0 0 0.2" rpy="0 0 0"/> 
+    <axis xyz="0 0 1"/>
+    <limit 
+      lower="-3.1459" 
+      upper="3.1459" 
+      velocity="1000.0" 
+      effort="1000.0"/>
+  </joint>
+
+  <!-- Link 2 -->
+  <link name="link_2">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 ${-3.14/2}"/>
+      <geometry>
+        <mesh filename="file:///$(find example_description)/meshes/link_2.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 ${-3.14/2}"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.13"/> <!-- Link 2 with radius 50mm, length 130mm -->
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joint 2 -->
+  <joint name="joint_2" type="revolute">
+    <parent link="link_1"/>
+    <child link="link_2"/>
+    <origin xyz="0.0 -0.12 0.0" rpy="${-3.14/2} 0 0"/> 
+    <axis xyz="0 0 1"/>
+    <limit 
+      lower="-3.1459" 
+      upper="3.1459" 
+      velocity="1000.0" 
+      effort="1000.0"/>
+  </joint>
+
+  <!-- Link 3 -->
+  <link name="link_3">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 ${-3.14/2}"/>
+      <geometry>
+        <mesh filename="file:///$(find example_description)/meshes/link_3.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 ${-3.14/2}"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.1"/> <!-- Link 3 with radius 50mm, length 100mm -->
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joint 3 -->
+  <joint name="joint_3" type="revolute">
+    <parent link="link_2"/>
+    <child link="link_3"/>
+    <origin xyz="0.0 -0.25 0.1" rpy="0 0 0"/> 
+    <axis xyz="0 0 1"/>
+    <limit 
+      lower="-3.1459" 
+      upper="3.1459" 
+      velocity="1000.0" 
+      effort="1000.0"/>
+  </joint>
+
+  <!-- End Effector -->
+  <link name="end_effector">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:///$(find example_description)/meshes/end_effector.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.05"/> <!-- End effector: Adjust as needed -->
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joint End Effector -->
+  <joint name="joint_end_effector" type="fixed">
+    <parent link="link_3"/>
+    <child link="end_effector"/>
+    <origin xyz="0.0 -0.28 0.0" rpy="${3.14/2} 0 0"/> 
+  </joint>
+  
+</robot>

@@ -13,6 +13,7 @@
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/random_position.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/random_controller.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/joint_sub_node.py
+/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/robot_server.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/cpp_node_test
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/config/my_display.rviz
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/config/display.rviz
@@ -28,6 +29,7 @@
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes/link_1.stl
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/robot/visual/my-robot.xacro
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/robot/visual/01-myfirst.urdf
+/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/robot/visual/moveit_robot.xacro
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/ament_index/resource_index/package_run_dependencies/example_description
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/ament_index/resource_index/parent_prefix_path/example_description
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/environment/ament_prefix_path.sh
