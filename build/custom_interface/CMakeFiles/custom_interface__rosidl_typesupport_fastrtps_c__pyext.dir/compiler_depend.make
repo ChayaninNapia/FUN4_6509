@@ -245,8 +245,13 @@ CMakeFiles/custom_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_gen
   rosidl_generator_c/custom_interface/srv/detail/change_mode__type_support.h \
   rosidl_generator_c/custom_interface/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/custom_interface/srv/detail/change_mode__struct.h \
-  rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.h
+  rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.h \
+  rosidl_generator_c/custom_interface/srv/detail/set_taskspace__type_support.h \
+  rosidl_generator_c/custom_interface/srv/detail/set_taskspace__struct.h \
+  rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.h
 
+
+rosidl_generator_c/custom_interface/srv/detail/set_taskspace__struct.h:
 
 rosidl_generator_c/custom_interface/srv/detail/change_mode__type_support.h:
 
@@ -528,6 +533,8 @@ rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_f
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
+rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
@@ -597,6 +604,8 @@ rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.h:
 /usr/include/python3.10/boolobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+rosidl_generator_c/custom_interface/srv/detail/set_taskspace__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 

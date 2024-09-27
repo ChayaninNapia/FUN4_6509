@@ -15,6 +15,10 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/detail/change_mode__builder.hpp" "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/change_mode.hpp"
   "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/detail/change_mode__struct.hpp" "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/change_mode.hpp"
   "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/detail/change_mode__traits.hpp" "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/change_mode.hpp"
+  "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/detail/set_taskspace__builder.hpp" "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/change_mode.hpp"
+  "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/detail/set_taskspace__struct.hpp" "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/change_mode.hpp"
+  "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/detail/set_taskspace__traits.hpp" "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/change_mode.hpp"
+  "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/set_taskspace.hpp" "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_cpp/custom_interface/srv/change_mode.hpp"
   )
 
 

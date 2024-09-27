@@ -65,7 +65,7 @@ def generate_launch_description():
     
     launch_description.add_action(rviz)
     launch_description.add_action(robot_state_publisher)
-    launch_description.add_action(random_pos_node)
+    # launch_description.add_action(random_pos_node)
     # launch_description.add_action(robot_server_node)
     # launch_description.add_action(joint_state_publisher_gui)
     

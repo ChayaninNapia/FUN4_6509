@@ -6,3 +6,4 @@ custom_interface.egg-info/dependency_links.txt
 custom_interface.egg-info/top_level.txt
 custom_interface/srv/__init__.py
 custom_interface/srv/_change_mode.py
+custom_interface/srv/_set_taskspace.py

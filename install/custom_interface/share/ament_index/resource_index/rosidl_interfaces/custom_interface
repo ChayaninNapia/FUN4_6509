@@ -2,3 +2,7 @@ srv/ChangeMode.idl
 srv/ChangeMode.srv
 srv/ChangeMode_Request.msg
 srv/ChangeMode_Response.msg
+srv/SetTaskspace.idl
+srv/SetTaskspace.srv
+srv/SetTaskspace_Request.msg
+srv/SetTaskspace_Response.msg

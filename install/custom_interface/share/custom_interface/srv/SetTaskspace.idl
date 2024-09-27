@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from custom_interface/srv/SetTaskspace.srv
+// generated code does not contain a copyright notice
+
+
+module custom_interface {
+  module srv {
+    @verbatim (language="comment", text=
+      "Request")
+    struct SetTaskspace_Request {
+      double x;
+
+      double y;
+
+      double z;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct SetTaskspace_Response {
+      boolean success;
+    };
+  };
+};

@@ -4,6 +4,10 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/custom_interface/srv/detail/change_mode__builder.hpp"
   "rosidl_generator_cpp/custom_interface/srv/detail/change_mode__struct.hpp"
   "rosidl_generator_cpp/custom_interface/srv/detail/change_mode__traits.hpp"
+  "rosidl_generator_cpp/custom_interface/srv/detail/set_taskspace__builder.hpp"
+  "rosidl_generator_cpp/custom_interface/srv/detail/set_taskspace__struct.hpp"
+  "rosidl_generator_cpp/custom_interface/srv/detail/set_taskspace__traits.hpp"
+  "rosidl_generator_cpp/custom_interface/srv/set_taskspace.hpp"
 )
 
 # Per-language clean rules from dependency scanning.
