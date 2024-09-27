@@ -14,7 +14,7 @@ class RandomTargetPublisher(Node):
         super().__init__('random_target_publisher')
         
         self.target_pub = self.create_publisher(PoseStamped, '/target', 10)
-        self.timer = self.create_timer(0.5, self.publish_random_target)
+        self.timer = self.create_timer(1.5, self.publish_random_target)
         self.get_logger().info('Random Target Publisher has been started.')
 
         self.l1 = 0.2   # 200 / 1000

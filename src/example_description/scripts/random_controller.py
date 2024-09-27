@@ -7,6 +7,7 @@ from sensor_msgs.msg import JointState
 from math import pi
 import roboticstoolbox as rtb
 from spatialmath import SE3
+import math
 
 class JointStateFollower(Node):
     def __init__(self):
@@ -14,14 +15,9 @@ class JointStateFollower(Node):
 
         # Publisher for joint states
         self.joint_pub = self.create_publisher(JointState, '/joint_states', 10)
-
+        
         # Subscriber for target poses
-        self.target_sub = self.create_subscription(
-            PoseStamped,
-            '/target',
-            self.target_callback,
-            10
-        )
+        self.target_sub = self.create_subscription(PoseStamped,'/target',self.target_callback,10)
 
         self.robot = rtb.DHRobot(
             [
@@ -68,6 +64,7 @@ class JointStateFollower(Node):
             self.get_logger().info("Published joint states for joint_1, joint_2, joint_3.")
         else:
             self.get_logger().warn("Inverse Kinematics did not find a solution for the received target.")
+            
 
 def main(args=None):
     rclpy.init(args=args)

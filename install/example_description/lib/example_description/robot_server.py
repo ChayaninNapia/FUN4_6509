@@ -8,16 +8,25 @@ from sensor_msgs.msg import JointState
 from math import pi
 import roboticstoolbox as rtb
 from spatialmath import SE3
+import math
 
 class RobotServer(Node):
     def __init__(self):
-        super().__init__('mode_service')
+        super().__init__('robot_server')
         self.srv = self.create_service(ChangeMode, 'change_mode', self.change_mode_callback)
 
         self.target_sub = None  
         self.joint_pub = self.create_publisher(JointState, '/joint_states', 10)
-
-        self.mode = 0  
+        self.target_sub = self.create_subscription(PoseStamped,'/target',self.target_callback,10)
+        self.create_timer(0.01, self.sim_loop_move)
+        
+        self.q_d = [0,0,0]
+        self.q = [0,0,0]
+        self.mode = 0
+        self.velocity = 0.35
+        self.dt = 0.01
+        self.name = ["joint_1", "joint_2", "joint_3"]
+        
         self.robot = rtb.DHRobot(
             [
                 rtb.RevoluteMDH(d=0.2, alpha=0, offset=0),           # Joint 1
@@ -89,6 +98,26 @@ class RobotServer(Node):
             self.target_sub = None
             self.get_logger().info('Unsubscribed from /target topic.')
 
+    def sim_loop_move(self):
+        msg = JointState()
+        msg.header.stamp = self.get_clock().now().to_msg()
+
+        for i in range(len(self.q)):
+            error = self.q_d[i] - self.q[i]
+            if abs(error) > 0.001:  
+                direction = math.copysign(1, error)  
+                delta = self.velocity * self.dt * direction 
+
+                if abs(delta) > abs(error):
+                    self.q[i] = self.q_d[i]
+                else:
+                    self.q[i] += delta
+
+            msg.position.append(self.q[i])
+            msg.name.append(self.name[i])
+        
+        self.joint_pub.publish(msg)
+        
 def main(args=None):
     rclpy.init(args=args)
     node = RobotServer()

@@ -22,6 +22,7 @@
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/launch/test.launch.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/launch/random_task.launch.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/launch/workspace_plot_display.launch.py
+/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/launch/controller3mode.launch.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes/link_2.stl
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes/link_0.stl
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/meshes/link_3.stl
