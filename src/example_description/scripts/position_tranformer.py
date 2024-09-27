@@ -11,8 +11,6 @@ class PositionTranformerNode(Node):
         super().__init__('position_tranformer_node')  
         
         self.get_logger().info('Node has been started.')
-        
-       
         self.q_d = [0.0, 1.57, 1.57]
         self.joint_pub = self.create_publisher(JointState, "/joint_states", 10)
         self.joint_sub = self.create_subscription(JointState, "/joint_states", self.joint_state_callback, 10)
@@ -53,14 +51,12 @@ class PositionTranformerNode(Node):
         msg = JointState()
         msg.header.stamp = self.get_clock().now().to_msg()
 
-        # Move joints toward the desired positions (self.q_d) at a constant velocity
         for i in range(len(self.q)):
             error = self.q_d[i] - self.q[i]
-            if abs(error) > 0.001:  # Small tolerance to stop motion when close enough
-                direction = math.copysign(1, error)  # Get the direction of motion
-                delta = self.velocity * self.dt * direction  # Change per timestep
+            if abs(error) > 0.001:  
+                direction = math.copysign(1, error)  
+                delta = self.velocity * self.dt * direction 
 
-                # Ensure we don't overshoot the target
                 if abs(delta) > abs(error):
                     self.q[i] = self.q_d[i]
                 else:
@@ -69,12 +65,11 @@ class PositionTranformerNode(Node):
             msg.position.append(self.q[i])
             msg.name.append(self.name[i])
         
-        # Publish the joint states with updated positions
         self.joint_pub.publish(msg)
 
     def joint_state_callback(self, msg):
         if len(msg.position) >= 3:
-            self.current_q = list(msg.position[:3])  # Get the first three joint positions
+            self.current_q = list(msg.position[:3])  
             # self.get_logger().info(f"Current joint positions: {self.current_q}")
 
     def manual_ikine(self):
