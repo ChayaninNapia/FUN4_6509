@@ -215,3 +215,5 @@ ros2 service call /sethome_service std_srvs/srv/SetBool "data: false"
 ros2 service call /change_mode custom_interface/srv/ChangeMode "{mode: 3}" 
 ```
 เมื่อเข้าโหมดนี้ จะมี โหนดที่ชื่อ /mode_3_controller_node ทำหน้าที่ รับ request จาก robot_server และ response True เมื่อทำสำเร็จ จากนั้นรับ รับตำแหน่งใหม่ 
+
+ในไฟล์สคริป ของ mode_3_controller_node เมื่อ ไปถึงตำแหน่งที่ต้องการจะ ปิด timer ของ control-loop และเปิดเมื่อ มีrequest จาก robot_server โดย srv ที่ส่งไปคือ Mode3Control.srv ซึ่ง request ไปในรูปของ list ของ float configuration ถึง ถูกแปลง จาก taskspace โดย robot_sever node
