@@ -1,5 +1,26 @@
 # FUN4_6509
 ## Part 1: Setup Environment
+downlaod หรือ clone workspace ไปที่ workspace ของคุณ
+```sh
+git clone https://github.com/ChayaninNapia/FUN4_6509/edit/main/README.md
+```
+ลบ โฟลเดอร์  build, install, log จากนั้นทำการ build file ใหม่ ด้วยคำสั่ง colcon
+```sh
+colcon build
+```
+cd ไปที่ home จากนั้นแก้ไข ไฟล์ bashrc เพื่อ source ไฟล์
+```sh
+code .bashrc
+```
+เพิ่มโค้ดนี้ลงไปในบรรทัดสุดท้าย แทนที่ your_workspace ด้วย ที่อยู่ของ workspace ของคุณ
+```sh
+source ~/your_workspace/install/setup.bash
+```
+เปิด terminal ใหม่ แล้ว cd ไปที่ workspace จากนั้นทำการ source ไฟล์
+```sh
+source install/setup.bash
+```
+
 ### 1.หา workspace ของแขนกลพร้อมวิธีการตรวจสอบคําตอบ (1 คะแนน)
 - คำนวณสมการ inverse kinematic ของ หุ่นยนต์เพื่อตรวจสอบ task workspace
   - หา q1
