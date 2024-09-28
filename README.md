@@ -1,5 +1,26 @@
 # FUN4_6509
 ## Part 1: Setup Environment
+download หรือ clone workspace ไปที่ workspace ของคุณ
+```sh
+git clone https://github.com/ChayaninNapia/FUN4_6509/edit/main/README.md
+```
+ลบ โฟลเดอร์  build, install, log จากนั้นทำการ build file ใหม่ ด้วยคำสั่ง colcon
+```sh
+colcon build
+```
+cd ไปที่ home จากนั้นแก้ไข ไฟล์ bashrc เพื่อ source ไฟล์
+```sh
+code .bashrc
+```
+เพิ่มโค้ดนี้ลงไปในบรรทัดสุดท้าย แทนที่ your_workspace ด้วย ที่อยู่ของ workspace ของคุณ
+```sh
+source ~/your_workspace/install/setup.bash
+```
+เปิด terminal ใหม่ แล้ว cd ไปที่ workspace จากนั้นทำการ source ไฟล์
+```sh
+source install/setup.bash
+```
+
 ### 1.หา workspace ของแขนกลพร้อมวิธีการตรวจสอบคําตอบ (1 คะแนน)
 - คำนวณสมการ inverse kinematic ของ หุ่นยนต์เพื่อตรวจสอบ task workspace
   - หา q1
@@ -104,10 +125,93 @@ Verification :
 ```sh
 ros2 launch example_description workspace_plot_display.launch.py
 ```
+เมื่อ run ไฟล์นี้ หุ่นยนต์จะค่อยๆพลอต workspace outter bound ที่หุ่นยนต์สามารถขยับไปได้ ลักษณะเป็นทรงกลม 
+
  <img src="src/img/workspace_plot1.png" alt="Alt Text for the Image" width="500" />
 
  ### 2.สร้าง node สําหรับสุ่มเป้าหมายตําแหน่งปลายมือภายใน workspace ของแขนกลใน topic ที่มีชื่อว่า /target (msg type: PoseStamped) และแสดงผลผ่าน RVIZ2 (0.5 คะแนน)
  ```sh
 ros2 launch example_description random_task.launch.py 
 ```
-      
+เมื่อรันไฟล์นี้ โหนดที่ชื่อ /random_position_node จะทำการสุ่มตำแหน่งและ publish topic /target: geometry_msgs/msg/PoseStamped ออกมาทุกๆ 5 วินาที
+
+เช็ค ข้อมูลของโนหด /random_position_node
+ ```sh
+ros2 node info /random_position_node
+```
+ดูข้อมูลที่ publish ออกมา
+```sh
+ros2 topic echo /target 
+````
+### 3.ส่งค่าตําแหน่งปลายมือผ่าน topic /end_effector (msg type: PoseStamped) และแสดงผลผ่าน RVIZ2
+ ```sh
+ros2 launch example_description end_effector_pos.launch.py 
+```
+เมื่อรันไฟล์นี้จะปรากฏหน้าต่าง gui และ rviz โดยมี node /roint_sub_node sub tf ของ end-effector เทียบ base 
+
+เช็คข้อมูลที่ออกมา
+
+```sh
+ros2 topic echo /end_effector
+```
+## Part 2: Controller
+
+```sh
+ros2 launch example_description controller3mode.launch.py 
+```
+### 1. mode 1 Inverse Pose Kinematics (IPK)
+เปลี่ยนเป็นโหมด 1
+```sh
+ros2 service call /change_mode custom_interface/srv/ChangeMode "mode: 1" 
+```
+เรียก service เพื่อระบุ task ที่ต้องการ ตัวอย่าง
+
+```sh
+ros2 service call /move_to_taskspace custom_interface/srv/SetTaskspace "{x: 0.28, y: -0.1, z: 0.2}"
+
+```
+
+เมื่อtaskไม่ได้อยู่ใน workspace จะ response success=False
+
+```sh
+ros2 service call /move_to_taskspace custom_interface/srv/SetTaskspace "{x: 0.28, y: -0.1, z: 1.2}"
+waiting for service to become available...
+requester: making request: custom_interface.srv.SetTaskspace_Request(x=0.28, y=-0.1, z=1.2)
+
+response:
+custom_interface.srv.SetTaskspace_Response(success=False)
+
+```
+สามารถเปิดแท็บใหม่ แล้วใช้เครื่องมือ tf2 ในการเช็คความถูกต้องของ tranformation
+```sh
+ros2 run tf2_ros tf2_echo link_0 end_effector
+```
+### 2. mode 2 Teleoperation
+เปลี่ยนเป็นโหมด 2
+```sh
+ros2 service call /change_mode custom_interface/srv/ChangeMode "{mode: 2}" 
+```
+เลือกโหมด reference 1 base frame / 2 end-effector frame
+```sh
+ ros2 service call /mode2_dlc custom_interface/srv/ChangeModeDlc "{mode: 1}"
+```
+เปิด หน้าต่างใหม่ รัน teleop_twist_keyboard
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+
+กด shift ค้างแล้วตามด้วย ปุ่มใน Holonomic mode 
+เมื่อหุ่นขยับไปจนใกล้ จะเกิด ingularity ที่หน้าterminal ของ launch ไฟล์ จะแสดงข้อความเตือน และ ต้อง เรียก service /sethome และตั้งโหมดใหม่อีกครั้ง
+```sh
+[robot_server.py-5] [WARN] [1727524432.934874109] [robot_server]: Manipulability is too low or NaN: 0.000779403431579281. Approaching singularity!
+[robot_server.py-5] [WARN] [1727524432.935113762] [robot_server]: please set home and set mode again
+```
+
+ros2 service call /sethome_service std_srvs/srv/SetBool "data: false" 
+
+### 3. mode 3  Auto
+
+```sh
+ros2 service call /change_mode custom_interface/srv/ChangeMode "{mode: 3}" 
+```
+เมื่อเข้าโหมดนี้ จะมี โหนดที่ชื่อ /mode_3_controller_node ทำหน้าที่ รับ request จาก robot_server และ response True เมื่อทำสำเร็จ จากนั้นรับ รับตำแหน่งใหม่ 
