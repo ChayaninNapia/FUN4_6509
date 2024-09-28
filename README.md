@@ -2,7 +2,7 @@
 ## Part 1: Setup Environment
 download หรือ clone workspace ไปที่ workspace ของคุณ
 ```sh
-git clone https://github.com/ChayaninNapia/FUN4_6509/edit/main/README.md
+git clone https://github.com/ChayaninNapia/FUN4_6509
 ```
 ลบ โฟลเดอร์  build, install, log จากนั้นทำการ build file ใหม่ ด้วยคำสั่ง colcon
 ```sh
