@@ -1,6 +1,6 @@
 # FUN4_6509
 ## Part 1: Setup Environment
-downlaod หรือ clone workspace ไปที่ workspace ของคุณ
+download หรือ clone workspace ไปที่ workspace ของคุณ
 ```sh
 git clone https://github.com/ChayaninNapia/FUN4_6509/edit/main/README.md
 ```
