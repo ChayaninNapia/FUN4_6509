@@ -3,7 +3,7 @@
 from example_description.dummy_module import dummy_function, dummy_var
 import rclpy
 from rclpy.node import Node
-
+from custom_interface.srv import Mode3Control  # Custom service for controlling mode 3
 
 class DummyNode(Node):
     def __init__(self):

@@ -69,6 +69,9 @@ include CMakeFiles/custom_interface.dir/progress.make
 CMakeFiles/custom_interface: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface/srv/ChangeMode.srv
 CMakeFiles/custom_interface: rosidl_cmake/srv/ChangeMode_Request.msg
 CMakeFiles/custom_interface: rosidl_cmake/srv/ChangeMode_Response.msg
+CMakeFiles/custom_interface: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface/srv/ChangeModeDlc.srv
+CMakeFiles/custom_interface: rosidl_cmake/srv/ChangeModeDlc_Request.msg
+CMakeFiles/custom_interface: rosidl_cmake/srv/ChangeModeDlc_Response.msg
 CMakeFiles/custom_interface: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface/srv/SetTaskspace.srv
 CMakeFiles/custom_interface: rosidl_cmake/srv/SetTaskspace_Request.msg
 CMakeFiles/custom_interface: rosidl_cmake/srv/SetTaskspace_Response.msg

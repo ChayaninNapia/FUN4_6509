@@ -70,6 +70,10 @@ CMakeFiles/custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/chan
 CMakeFiles/custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/change_mode__builder.hpp
 CMakeFiles/custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/change_mode__struct.hpp
 CMakeFiles/custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/change_mode__traits.hpp
+CMakeFiles/custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/change_mode_dlc.hpp
+CMakeFiles/custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__builder.hpp
+CMakeFiles/custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__struct.hpp
+CMakeFiles/custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__traits.hpp
 CMakeFiles/custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/set_taskspace.hpp
 CMakeFiles/custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/set_taskspace__builder.hpp
 CMakeFiles/custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/set_taskspace__struct.hpp
@@ -95,6 +99,7 @@ rosidl_generator_cpp/custom_interface/srv/change_mode.hpp: /opt/ros/humble/share
 rosidl_generator_cpp/custom_interface/srv/change_mode.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/custom_interface/srv/change_mode.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/custom_interface/srv/change_mode.hpp: rosidl_adapter/custom_interface/srv/ChangeMode.idl
+rosidl_generator_cpp/custom_interface/srv/change_mode.hpp: rosidl_adapter/custom_interface/srv/ChangeModeDlc.idl
 rosidl_generator_cpp/custom_interface/srv/change_mode.hpp: rosidl_adapter/custom_interface/srv/SetTaskspace.idl
 rosidl_generator_cpp/custom_interface/srv/change_mode.hpp: rosidl_adapter/custom_interface/srv/Mode3Control.idl
 rosidl_generator_cpp/custom_interface/srv/change_mode.hpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
@@ -169,6 +174,18 @@ rosidl_generator_cpp/custom_interface/srv/detail/change_mode__struct.hpp: rosidl
 rosidl_generator_cpp/custom_interface/srv/detail/change_mode__traits.hpp: rosidl_generator_cpp/custom_interface/srv/change_mode.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interface/srv/detail/change_mode__traits.hpp
 
+rosidl_generator_cpp/custom_interface/srv/change_mode_dlc.hpp: rosidl_generator_cpp/custom_interface/srv/change_mode.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interface/srv/change_mode_dlc.hpp
+
+rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__builder.hpp: rosidl_generator_cpp/custom_interface/srv/change_mode.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__builder.hpp
+
+rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__struct.hpp: rosidl_generator_cpp/custom_interface/srv/change_mode.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__struct.hpp
+
+rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__traits.hpp: rosidl_generator_cpp/custom_interface/srv/change_mode.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__traits.hpp
+
 rosidl_generator_cpp/custom_interface/srv/set_taskspace.hpp: rosidl_generator_cpp/custom_interface/srv/change_mode.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interface/srv/set_taskspace.hpp
 
@@ -195,9 +212,13 @@ rosidl_generator_cpp/custom_interface/srv/detail/mode3_control__traits.hpp: rosi
 
 custom_interface__cpp: CMakeFiles/custom_interface__cpp
 custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/change_mode.hpp
+custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/change_mode_dlc.hpp
 custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/change_mode__builder.hpp
 custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/change_mode__struct.hpp
 custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/change_mode__traits.hpp
+custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__builder.hpp
+custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__struct.hpp
+custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__traits.hpp
 custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/mode3_control__builder.hpp
 custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/mode3_control__struct.hpp
 custom_interface__cpp: rosidl_generator_cpp/custom_interface/srv/detail/mode3_control__traits.hpp

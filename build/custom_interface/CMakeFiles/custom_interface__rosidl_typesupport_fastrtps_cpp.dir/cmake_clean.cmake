@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/custom_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/dds_fastrtps/change_mode__type_support.cpp.o"
   "CMakeFiles/custom_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/dds_fastrtps/change_mode__type_support.cpp.o.d"
+  "CMakeFiles/custom_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/dds_fastrtps/change_mode_dlc__type_support.cpp.o"
+  "CMakeFiles/custom_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/dds_fastrtps/change_mode_dlc__type_support.cpp.o.d"
   "CMakeFiles/custom_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/dds_fastrtps/mode3_control__type_support.cpp.o"
   "CMakeFiles/custom_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/dds_fastrtps/mode3_control__type_support.cpp.o.d"
   "CMakeFiles/custom_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/dds_fastrtps/set_taskspace__type_support.cpp.o"
@@ -8,7 +10,9 @@ file(REMOVE_RECURSE
   "libcustom_interface__rosidl_typesupport_fastrtps_cpp.pdb"
   "libcustom_interface__rosidl_typesupport_fastrtps_cpp.so"
   "rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/change_mode__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/change_mode_dlc__rosidl_typesupport_fastrtps_cpp.hpp"
   "rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/dds_fastrtps/change_mode__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/dds_fastrtps/change_mode_dlc__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/dds_fastrtps/mode3_control__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/dds_fastrtps/set_taskspace__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/custom_interface/srv/detail/mode3_control__rosidl_typesupport_fastrtps_cpp.hpp"

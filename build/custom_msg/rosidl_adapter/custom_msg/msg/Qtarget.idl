@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from custom_msg/msg/Qtarget.msg
+// generated code does not contain a copyright notice
+
+
+module custom_msg {
+  module msg {
+    struct Qtarget {
+      sequence<double> target_q;
+
+      sequence<double> current_q;
+    };
+  };
+};

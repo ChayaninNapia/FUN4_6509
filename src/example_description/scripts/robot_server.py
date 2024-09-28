@@ -2,36 +2,54 @@
 
 import rclpy
 from rclpy.node import Node
-from custom_interface.srv import ChangeMode, SetTaskspace, Mode3Control
-from geometry_msgs.msg import PoseStamped
+from custom_interface.srv import ChangeMode, SetTaskspace, Mode3Control, ChangeModeDlc
+from geometry_msgs.msg import PoseStamped,Twist
 from sensor_msgs.msg import JointState
 from math import pi
 import roboticstoolbox as rtb
 from spatialmath import SE3
 import math
 from std_srvs.srv import SetBool
+from std_msgs.msg import Bool
+from numpy.linalg import det
+from numpy.linalg import eig
+import numpy as np
+from custom_msg.msg import Qtarget
 
 
 class RobotServer(Node):
     def __init__(self):
         super().__init__('robot_server')
         self.srv = self.create_service(ChangeMode, 'change_mode', self.change_mode_callback)
+        self.srv = self.create_service(ChangeModeDlc, 'mode2_dlc', self.mode2dlc_callback)
 
         self.target_sub = None  
         self.joint_pub = self.create_publisher(JointState, '/joint_states', 10)
+        
+        self.subscription = self.create_subscription(Twist,'/cmd_vel',self.setAngularVelocity_callback,10 )
+        self.joint_sub = None
         
         self.set_task_server = self.create_service(SetTaskspace, 'move_to_taskspace', self.handle_move_to_taskspace)
         self.random_target_client = self.create_client(SetBool, 'activate_random')
         self.mode3_controller_client = self.create_client(Mode3Control, 'mode_3_controller')
         self.controller_timer = self.create_timer(0.01, self.sim_loop_move)
+        self.mode2_controller_timer = self.create_timer(0.01, self.mode2_controller)
+        self.sethome_server = self.create_service(SetBool, '/sethome_service', self.sethome)
+        self.p = self.create_publisher(Qtarget, '/sethome',10)
+        self.controller_timer.cancel()
+        self.mode2_controller_timer.cancel()
         
         self.q_d = [0,0,0]
-        self.q = [0,0,0]
+        self.q = [0, pi/4, pi/2]
+        self.q_dot = [0,0,0]
         self.mode = 0
         self.velocity = 1.5
         self.dt = 0.01
         self.name = ["joint_1", "joint_2", "joint_3"]
-        
+        self.q_home = [0, pi/4, pi/2]
+        self.current_q = [0, pi/4, pi/2,0]
+        self.desire_V = [0,0,0]
+        self.mode2_dlc = 1
         self.robot = rtb.DHRobot(
             [
                 rtb.RevoluteMDH(d=0.2, alpha=0, offset=0),           # Joint 1
@@ -45,29 +63,127 @@ class RobotServer(Node):
         self.joint_names = ["joint_1", "joint_2", "joint_3"]
         self.current_joint_state = [0.0, 0.0, 0.0]
         self.get_logger().info('Robot Server Node has been started.')
+        self.active2 = True
+        
+        msg = JointState()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        for i in range(len(self.q)):
+            msg.position.append(self.q_home[i])
+            msg.name.append(self.name[i])
+        self.joint_pub.publish(msg)
 
+
+    def q_dot_callback(self, msg: JointState):
+        
+        if self.mode != 2:
+            return
+        
+        for i,q in enumerate(msg.position):
+            self.current_q[i] = q
+        
+        if self.mode2_dlc == 1:
+            self.J = self.robot.jacob0(self.current_q)
+        else:
+            self.J = self.robot.jacobe(self.current_q)
+            
+        J_reduced = self.J[0:3, 0:-1]
+        desired_velocities = self.desire_V
+        
+        determinant = det(J_reduced @ J_reduced.T)
+    
+        if determinant < 0:
+            self.get_logger().warn(f"Negative determinant encountered: {determinant}. Cannot compute manipulability.")
+            manipulability = np.nan
+        else:
+            manipulability = np.sqrt(determinant)
+        
+        A = J_reduced @ J_reduced.T
+
+        if np.isnan(manipulability) or manipulability < 1e-3:
+            self.active2 = False
+            self.q_d = [0,0,0]
+            self.q_dot = [0,0,0]
+            self.mode = 0
+            self.desire_V = [0,0,0]
+            self.mode2_controller_timer.cancel()
+            self.get_logger().warn(f"Manipulability is too low or NaN: {manipulability}. Approaching singularity!")
+            self.get_logger().warn(f"please set home and set mode again")
+        else:
+            try:
+                J_inv = np.linalg.inv(J_reduced)
+                joint_velocities = J_inv @ desired_velocities
+                print(f"Manipulability: {manipulability}")
+                print(joint_velocities)
+                
+                self.q_dot = joint_velocities/10
+            except np.linalg.LinAlgError as e:
+                self.get_logger().warn(f"Failed to compute inverse of J_reduced due to near-singularity. Manipulability: {manipulability}")
+
+    def setAngularVelocity_callback(self, msg:Twist):  
+        self.desire_V = [msg.linear.x,msg.linear.y,msg.linear.z]
+
+    def sethome(self, r, q):
+        self.active2 = True
+        msg = Qtarget()
+        msg.current_q = list(map(float, self.q))
+        msg.target_q = []
+        self.p.publish(msg)
+        self.active2 = True
+        self.q_dot = [0,0,0]
+        self.q = [0, pi/4, pi/2]
+
+        return q
 
     def change_mode_callback(self, request, response):
         mode_name = ["Inverse Pose Kinematics", "Teleoperation", "Auto"]
         if request.mode in [1, 2, 3]:
             self.mode = request.mode
             self.get_logger().info(f'Changing mode to {self.mode} : {mode_name[request.mode - 1]}')
+            
+            self.stop_target_subscription()
+            self.call_random_target_service(False)
+            self.controller_timer.cancel()
+            self.mode2_controller_timer.cancel()
+            self.joint_sub = None
 
             if self.mode == 3:
-                # If mode 1 (Inverse Pose Kinematics), start subscribing to /target topic
                 self.call_random_target_service(True)
                 self.start_target_subscription()
+                self.joint_sub = None
+                
+            elif self.mode == 2:
                 self.controller_timer.cancel()
+                self.stop_target_subscription()
+                self.call_random_target_service(False)
+                self.joint_sub = self.create_subscription(JointState, '/joint_states', self.q_dot_callback,10)
+                self.mode2_controller_timer.reset()
+                
+                
             else:
                 # If not mode 1, stop subscribing to /target topic
                 self.call_random_target_service(False)
                 self.stop_target_subscription()
                 self.controller_timer.reset()
+                self.mode2_controller_timer.cancel()
+                self.joint_sub = None
 
             response.success = True
         else:
             self.get_logger().warn(f'Received invalid mode: {request.mode}')
             response.success = False
+        return response
+    
+    def mode2dlc_callback(self, request, response):
+        if request.mode in [1, 2]:
+            if request.mode == 1:
+                self.mode2_dlc = 1
+            else:
+                self.mode2_dlc = 2
+            response.success = True
+        else:
+            self.get_logger().warn(f'Received invalid mode2_dlc: {request.mode}')
+            response.success = False
+            
         return response
 
     def start_target_subscription(self):
@@ -179,6 +295,22 @@ class RobotServer(Node):
             msg.name.append(self.name[i])
         
         self.joint_pub.publish(msg)
+        
+    def mode2_controller(self):
+        print(f'mode2timer active2: {self.active2}')
+        if self.active2:       
+            self.home_state = False
+            msg = JointState()
+            msg.header.stamp = self.get_clock().now().to_msg()
+            q_d = self.q_dot[0:3]
+            self.q[0] = self.q[0] + (q_d[0] * self.dt)
+            self.q[1] = self.q[1] + (q_d[1] * self.dt)
+            self.q[2] = self.q[2] + (q_d[2] * self.dt)
+            for i in range(len(self.q)):
+                msg.position.append(self.q[i])
+                msg.name.append(self.name[i])
+            self.joint_pub.publish(msg)
+            
         
     def handle_move_to_taskspace(self, request, response):
         

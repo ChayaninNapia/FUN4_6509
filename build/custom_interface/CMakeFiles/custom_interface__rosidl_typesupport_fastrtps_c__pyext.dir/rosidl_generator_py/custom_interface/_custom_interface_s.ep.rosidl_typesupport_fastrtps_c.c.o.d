@@ -205,6 +205,9 @@ CMakeFiles/custom_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_gen
  /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/msg/rosidl_generator_c__visibility_control.h \
  /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/change_mode__struct.h \
  /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.h \
+ /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/change_mode_dlc__type_support.h \
+ /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/change_mode_dlc__struct.h \
+ /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/change_mode_dlc__functions.h \
  /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__type_support.h \
  /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__struct.h \
  /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.h \

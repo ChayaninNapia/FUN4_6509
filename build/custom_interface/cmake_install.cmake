@@ -360,6 +360,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interface/srv" TYPE FILE FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_adapter/custom_interface/srv/ChangeModeDlc.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interface/srv" TYPE FILE FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_adapter/custom_interface/srv/SetTaskspace.idl")
 endif()
 
@@ -377,6 +381,18 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interface/srv" TYPE FILE FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_cmake/srv/ChangeMode_Response.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interface/srv" TYPE FILE FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface/srv/ChangeModeDlc.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interface/srv" TYPE FILE FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_cmake/srv/ChangeModeDlc_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interface/srv" TYPE FILE FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_cmake/srv/ChangeModeDlc_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

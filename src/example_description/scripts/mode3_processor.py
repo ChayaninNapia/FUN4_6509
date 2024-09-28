@@ -3,22 +3,27 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import JointState
-from custom_interface.srv import Mode3Control  # Custom service for controlling mode 3
+from custom_interface.srv import Mode3Control  
 import math
-
+from std_msgs.msg import Bool
+from math import pi
+from custom_msg.msg import Qtarget
+from std_msgs.msg import Int16
 
 class Mode3Controller(Node):
     def __init__(self):
         super().__init__('mode_3_controller_node')
         self.joint_pub = self.create_publisher(JointState, '/joint_states', 10)
+        self.m3 = self.create_publisher(Int16, '/mode3finish', 10)
         self.controller_service = self.create_service(Mode3Control, 'mode_3_controller', self.handle_mode3_control_request)
         self.controller_timer = None  # Will be created when needed
-        
+        self.sethome_sub = self.create_subscription(Qtarget, '/sethome', self.sethome,10)
         self.q_d = []
         self.q = [0.0, 0.0, 0.0]  # Current joint states, initialized to 0
-        self.velocity = 1.5
+        self.velocity = 2.5
         self.dt = 0.01
         self.joint_names = ["joint_1", "joint_2", "joint_3"]
+        self.q_home = [0, pi/4, pi/2]
 
     def handle_mode3_control_request(self, request, response):
         """Handle the Mode3Control service request from RobotServer."""
@@ -30,6 +35,11 @@ class Mode3Controller(Node):
         
         response.success = True
         return response
+
+    def sethome(self, msg:Qtarget):
+        self.q = msg.current_q
+        self.controller_timer = self.create_timer(0.01, self.sim_loop_move)
+        self.q_d = self.q_home
 
     def sim_loop_move(self):
         msg = JointState()
@@ -58,6 +68,9 @@ class Mode3Controller(Node):
         if all_joints_reached:
             self.controller_timer.cancel()
             self.controller_timer = None  # Stop the timer
+            flag = Int16()
+            flag.data = 1
+            self.m3.publish(flag)
             self.get_logger().info('Reached target joint positions. Ready for new request.')
 
 

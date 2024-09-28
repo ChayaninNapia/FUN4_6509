@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/custom_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interface/srv/change_mode__type_support.cpp.o"
   "CMakeFiles/custom_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interface/srv/change_mode__type_support.cpp.o.d"
+  "CMakeFiles/custom_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interface/srv/change_mode_dlc__type_support.cpp.o"
+  "CMakeFiles/custom_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interface/srv/change_mode_dlc__type_support.cpp.o.d"
   "CMakeFiles/custom_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interface/srv/mode3_control__type_support.cpp.o"
   "CMakeFiles/custom_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interface/srv/mode3_control__type_support.cpp.o.d"
   "CMakeFiles/custom_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interface/srv/set_taskspace__type_support.cpp.o"
@@ -8,6 +10,7 @@ file(REMOVE_RECURSE
   "libcustom_interface__rosidl_typesupport_c.pdb"
   "libcustom_interface__rosidl_typesupport_c.so"
   "rosidl_typesupport_c/custom_interface/srv/change_mode__type_support.cpp"
+  "rosidl_typesupport_c/custom_interface/srv/change_mode_dlc__type_support.cpp"
   "rosidl_typesupport_c/custom_interface/srv/mode3_control__type_support.cpp"
   "rosidl_typesupport_c/custom_interface/srv/set_taskspace__type_support.cpp"
 )

@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_introspection_c.c"
   "../rosidl_generator_py/custom_interface/srv/__init__.py"
   "../rosidl_generator_py/custom_interface/srv/_change_mode.py"
+  "../rosidl_generator_py/custom_interface/srv/_change_mode_dlc.py"
+  "../rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c"
   "../rosidl_generator_py/custom_interface/srv/_change_mode_s.c"
   "../rosidl_generator_py/custom_interface/srv/_mode3_control.py"
   "../rosidl_generator_py/custom_interface/srv/_mode3_control_s.c"

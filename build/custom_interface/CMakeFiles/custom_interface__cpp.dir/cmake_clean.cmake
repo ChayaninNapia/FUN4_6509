@@ -1,9 +1,13 @@
 file(REMOVE_RECURSE
   "CMakeFiles/custom_interface__cpp"
   "rosidl_generator_cpp/custom_interface/srv/change_mode.hpp"
+  "rosidl_generator_cpp/custom_interface/srv/change_mode_dlc.hpp"
   "rosidl_generator_cpp/custom_interface/srv/detail/change_mode__builder.hpp"
   "rosidl_generator_cpp/custom_interface/srv/detail/change_mode__struct.hpp"
   "rosidl_generator_cpp/custom_interface/srv/detail/change_mode__traits.hpp"
+  "rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__builder.hpp"
+  "rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__struct.hpp"
+  "rosidl_generator_cpp/custom_interface/srv/detail/change_mode_dlc__traits.hpp"
   "rosidl_generator_cpp/custom_interface/srv/detail/mode3_control__builder.hpp"
   "rosidl_generator_cpp/custom_interface/srv/detail/mode3_control__struct.hpp"
   "rosidl_generator_cpp/custom_interface/srv/detail/mode3_control__traits.hpp"

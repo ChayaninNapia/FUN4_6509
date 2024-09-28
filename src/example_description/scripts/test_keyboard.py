@@ -21,11 +21,10 @@ class TeleopListener(Node):
         self.joint_sub = self.create_subscription(JointState, '/joint_states', self.q_dot_callback,10)
         self.joint_pub = self.create_publisher(JointState, '/joint_states',10)
         self.timer = self.create_timer(0.01, self.control_loop_callback)
-        self.set_home_timer = self.create_timer(0.01, self.setHome_controller)
-        self.set_home_timer.cancel()
+
         self.get_logger().info('Teleop Listener Node has been started, subscribing to /cmd_vel.')
         
-        self.set_home_server = self.create_service(SetBool, '/sethome')
+        self.set_home_server = self.create_service(SetBool, '',self.set_home_callback)
     
         self.robot = rtb.DHRobot(
             [
@@ -40,12 +39,14 @@ class TeleopListener(Node):
         np.set_printoptions(precision=6, suppress=True)
 
         self.current_q = self.q = [0, pi/4, pi/2,0]
+        self.q_home = [0, pi/4, pi/2]
         self.q = self.current_q[0:3]
         self.desire_V = [0,0,0]
         self.q_dot = [0,0,0]     
         self.dt = 0.01  
         self.name = ["joint_1", "joint_2", "joint_3"]
         self.home_state = True
+        self.velocity = 0.5
         
     def setAngularVelocity_callback(self, msg:Twist):  
         self.get_logger().info(f'Received /cmd_vel: linear=({msg.linear.x}, {msg.linear.y}, {msg.linear.z}), '
@@ -73,25 +74,14 @@ class TeleopListener(Node):
         A = J_reduced @ J_reduced.T
         eigenvalues, eigenvectors = eig(A)
         
-        # print("desire velocity ralative to base:")
-        
-        # print(msg.linear)
-        # print(f"Manipulability: {manipulability}")
     
         A = J_reduced @ J_reduced.T
-        eigenvalues, eigenvectors = eig(A)
-        # print(self.current_q)
-        # print(eigenvalues)
-        # if np.min(eigenvalues) < 0.01:
-        #     print(f'current_q : {self.current_q}  Warning: Robot approaching singularity!')
-        # else:
-        #     print(f'current_q : {self.current_q}')
+
         if np.isnan(manipulability) or manipulability < 1e-3:
             self.timer.cancel()
             self.get_logger().warn(f"Manipulability is too low or NaN: {manipulability}. Approaching singularity!")
         else:
             try:
-                # Attempt to compute the inverse of the reduced Jacobian matrix
                 J_inv = np.linalg.inv(J_reduced)
                 joint_velocities = J_inv @ desired_velocities
                 print(f"Manipulability: {manipulability}")
@@ -99,7 +89,6 @@ class TeleopListener(Node):
                 
                 self.q_dot = joint_velocities/10
             except np.linalg.LinAlgError as e:
-                # Handle the case where the matrix is singular
                 self.get_logger().warn(f"Failed to compute inverse of J_reduced due to near-singularity. Manipulability: {manipulability}")
                 
     def control_loop_callback(self):
@@ -115,31 +104,7 @@ class TeleopListener(Node):
             msg.name.append(self.name[i])
         self.joint_pub.publish(msg)
         
-    def set_home_callback(self, request, response):
-        if request.data:
-            self.set_home_timer.reset()
             
-    def setHome_controller(self):
-        msg = JointState()
-        msg.header.stamp = self.get_clock().now().to_msg()
-
-        for i in range(len(self.q)):
-            error = self.q_d[i] - self.q[i]
-            if abs(error) > 0.001:  
-                direction = math.copysign(1, error)  
-                delta = self.velocity * self.dt * direction 
-
-                if abs(delta) > abs(error):
-                    self.q[i] = self.q_d[i]
-                else:
-                    self.q[i] += delta
-
-            msg.position.append(self.q[i])
-            msg.name.append(self.name[i])
-        
-        self.joint_pub.publish(msg)
-            
-        
             
 
 def main(args=None):

@@ -83,10 +83,24 @@ CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_py/custom_interface/srv/_change_mode_s.c -o CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_s.c.s
 
+CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.o: CMakeFiles/custom_interface__rosidl_generator_py.dir/flags.make
+CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.o: rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c
+CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.o: CMakeFiles/custom_interface__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.o -MF CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.o.d -o CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.o -c /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c
+
+CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c > CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.i
+
+CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c -o CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.s
+
 CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.o: CMakeFiles/custom_interface__rosidl_generator_py.dir/flags.make
 CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.o: rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c
 CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.o: CMakeFiles/custom_interface__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.o -MF CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.o.d -o CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.o -c /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c
 
 CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_
 CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.o: CMakeFiles/custom_interface__rosidl_generator_py.dir/flags.make
 CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.o: rosidl_generator_py/custom_interface/srv/_mode3_control_s.c
 CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.o: CMakeFiles/custom_interface__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.o -MF CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.o.d -o CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.o -c /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c
 
 CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.i: cmake_force
@@ -114,6 +128,7 @@ CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_
 # Object files for target custom_interface__rosidl_generator_py
 custom_interface__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_s.c.o" \
+"CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.o" \
 "CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.o" \
 "CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.o"
 
@@ -121,6 +136,7 @@ custom_interface__rosidl_generator_py_OBJECTS = \
 custom_interface__rosidl_generator_py_EXTERNAL_OBJECTS =
 
 rosidl_generator_py/custom_interface/libcustom_interface__rosidl_generator_py.so: CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_s.c.o
+rosidl_generator_py/custom_interface/libcustom_interface__rosidl_generator_py.so: CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_dlc_s.c.o
 rosidl_generator_py/custom_interface/libcustom_interface__rosidl_generator_py.so: CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.o
 rosidl_generator_py/custom_interface/libcustom_interface__rosidl_generator_py.so: CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.o
 rosidl_generator_py/custom_interface/libcustom_interface__rosidl_generator_py.so: CMakeFiles/custom_interface__rosidl_generator_py.dir/build.make
@@ -140,7 +156,7 @@ rosidl_generator_py/custom_interface/libcustom_interface__rosidl_generator_py.so
 rosidl_generator_py/custom_interface/libcustom_interface__rosidl_generator_py.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 rosidl_generator_py/custom_interface/libcustom_interface__rosidl_generator_py.so: /opt/ros/humble/lib/librcutils.so
 rosidl_generator_py/custom_interface/libcustom_interface__rosidl_generator_py.so: CMakeFiles/custom_interface__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library rosidl_generator_py/custom_interface/libcustom_interface__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library rosidl_generator_py/custom_interface/libcustom_interface__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/custom_interface__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
