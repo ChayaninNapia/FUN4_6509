@@ -66,13 +66,21 @@ def generate_launch_description():
         executable='mode3_processor.py',  
     )
     
-
+    teleop_twist_keyboard = Node(
+        package='teleop_twist_keyboard',
+        executable='teleop_twist_keyboard',
+        name='teleop_twist_keyboard',
+        output='screen',
+        prefix='xterm -e'  # Optional: This will open the node in a separate terminal window
+    )
+    
     launch_description = LaunchDescription()
     
     launch_description.add_action(rviz)
     launch_description.add_action(robot_state_publisher)
     launch_description.add_action(random_pos_node)
     launch_description.add_action(mode3_processor_node)
+    launch_description.add_action(teleop_twist_keyboard)
     # launch_description.add_action(robot_server_node)
     # launch_description.add_action(joint_state_publisher_gui)
     
