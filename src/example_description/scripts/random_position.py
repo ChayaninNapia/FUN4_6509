@@ -19,7 +19,7 @@ class RandomTargetPublisher(Node):
         self.timer.cancel()
         self.srv = self.create_service(SetBool, 'activate_random', self.activate_random_target_callback)
 
-        self.active = False  # Flag to track if random publishing is active
+        self.active = False  
         self.get_logger().info('Random Target Publisher has been started.')
 
         self.l1 = 0.2   # 200 / 1000

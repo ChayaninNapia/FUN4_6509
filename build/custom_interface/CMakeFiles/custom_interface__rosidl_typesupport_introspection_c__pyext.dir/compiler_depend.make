@@ -246,6 +246,9 @@ CMakeFiles/custom_interface__rosidl_typesupport_introspection_c__pyext.dir/rosid
   rosidl_generator_c/custom_interface/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/custom_interface/srv/detail/change_mode__struct.h \
   rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.h \
+  rosidl_generator_c/custom_interface/srv/detail/change_mode_dlc__type_support.h \
+  rosidl_generator_c/custom_interface/srv/detail/change_mode_dlc__struct.h \
+  rosidl_generator_c/custom_interface/srv/detail/change_mode_dlc__functions.h \
   rosidl_generator_c/custom_interface/srv/detail/set_taskspace__type_support.h \
   rosidl_generator_c/custom_interface/srv/detail/set_taskspace__struct.h \
   rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.h \
@@ -470,6 +473,8 @@ rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_i
 
 /usr/include/asm-generic/int-ll64.h:
 
+rosidl_generator_c/custom_interface/srv/detail/change_mode_dlc__functions.h:
+
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
@@ -481,6 +486,8 @@ rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_i
 /usr/include/asm-generic/posix_types.h:
 
 /usr/include/stdc-predef.h:
+
+rosidl_generator_c/custom_interface/srv/detail/change_mode_dlc__type_support.h:
 
 /usr/include/python3.10/pystrtod.h:
 
@@ -607,6 +614,8 @@ rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.h:
 /usr/include/x86_64-linux-gnu/python3.10/pyconfig.h:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+rosidl_generator_c/custom_interface/srv/detail/change_mode_dlc__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 

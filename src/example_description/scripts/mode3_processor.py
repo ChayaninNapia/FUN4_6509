@@ -16,17 +16,17 @@ class Mode3Controller(Node):
         self.joint_pub = self.create_publisher(JointState, '/joint_states', 10)
         self.m3 = self.create_publisher(Int16, '/mode3finish', 10)
         self.controller_service = self.create_service(Mode3Control, 'mode_3_controller', self.handle_mode3_control_request)
-        self.controller_timer = None  # Will be created when needed
+        self.controller_timer = None  
         self.sethome_sub = self.create_subscription(Qtarget, '/sethome', self.sethome,10)
         self.q_d = []
-        self.q = [0.0, 0.0, 0.0]  # Current joint states, initialized to 0
+        self.q = [0.0, 0.0, 0.0]  
         self.velocity = 2.5
         self.dt = 0.01
         self.joint_names = ["joint_1", "joint_2", "joint_3"]
         self.q_home = [0, pi/4, pi/2]
 
     def handle_mode3_control_request(self, request, response):
-        """Handle the Mode3Control service request from RobotServer."""
+
         self.q_d = request.target_joint_positions
         self.get_logger().info(f'Received new target joint positions: {self.q_d}')
 
@@ -58,7 +58,7 @@ class Mode3Controller(Node):
                 else:
                     self.q[i] += delta
 
-                all_joints_reached = False  # Still moving toward target
+                all_joints_reached = False  
 
             msg.position.append(self.q[i])
             msg.name.append(self.joint_names[i])
@@ -67,7 +67,7 @@ class Mode3Controller(Node):
 
         if all_joints_reached:
             self.controller_timer.cancel()
-            self.controller_timer = None  # Stop the timer
+            self.controller_timer = None 
             flag = Int16()
             flag.data = 1
             self.m3.publish(flag)

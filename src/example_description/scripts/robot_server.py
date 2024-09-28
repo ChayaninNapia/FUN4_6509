@@ -187,20 +187,20 @@ class RobotServer(Node):
         return response
 
     def start_target_subscription(self):
-        """Start subscribing to the /target topic."""
+        
         if self.target_sub is None:
             self.target_sub = self.create_subscription(PoseStamped, '/target', self.target_callback, 10)
             self.get_logger().info('Subscribed to /target topic.')
 
     def stop_target_subscription(self):
-        """Stop subscribing to the /target topic."""
+       
         if self.target_sub is not None:
             self.destroy_subscription(self.target_sub)
             self.target_sub = None
             self.get_logger().info('Unsubscribed from /target topic.')
             
     def call_random_target_service(self, activate: bool):
-        """Request to activate or deactivate the random target publishing."""
+        
         if not self.random_target_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().warn('Random target service not available.')
             return
@@ -231,7 +231,7 @@ class RobotServer(Node):
         z = msg.pose.position.z
 
         desired_pose = SE3(x, y, z)
-        mask = [1, 1, 1, 0, 0, 0]  # Only consider translation, ignore rotation
+        mask = [1, 1, 1, 0, 0, 0]  
         solution = self.robot.ikine_LM(desired_pose, mask=mask)
 
         if solution.success:      
