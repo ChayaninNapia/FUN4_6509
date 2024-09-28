@@ -182,3 +182,36 @@ response:
 custom_interface.srv.SetTaskspace_Response(success=False)
 
 ```
+สามารถเปิดแท็บใหม่ แล้วใช้เครื่องมือ tf2 ในการเช็คความถูกต้องของ tranformation
+```sh
+ros2 run tf2_ros tf2_echo link_0 end_effector
+```
+### 2. mode 2 Teleoperation
+เปลี่ยนเป็นโหมด 2
+```sh
+ros2 service call /change_mode custom_interface/srv/ChangeMode "{mode: 2}" 
+```
+เลือกโหมด reference 1 base frame / 2 end-effector frame
+```sh
+ ros2 service call /mode2_dlc custom_interface/srv/ChangeModeDlc "{mode: 1}"
+```
+เปิด หน้าต่างใหม่ รัน teleop_twist_keyboard
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+
+กด shift ค้างแล้วตามด้วย ปุ่มใน Holonomic mode 
+เมื่อหุ่นขยับไปจนใกล้ จะเกิด ingularity ที่หน้าterminal ของ launch ไฟล์ จะแสดงข้อความเตือน และ ต้อง เรียก service /sethome และตั้งโหมดใหม่อีกครั้ง
+```sh
+[robot_server.py-5] [WARN] [1727524432.934874109] [robot_server]: Manipulability is too low or NaN: 0.000779403431579281. Approaching singularity!
+[robot_server.py-5] [WARN] [1727524432.935113762] [robot_server]: please set home and set mode again
+```
+
+ros2 service call /sethome_service std_srvs/srv/SetBool "data: false" 
+
+### 3. mode 3  Auto
+
+```sh
+ros2 service call /change_mode custom_interface/srv/ChangeMode "{mode: 3}" 
+```
+เมื่อเข้าโหมดนี้ จะมี โหนดที่ชื่อ /mode_3_controller_node ทำหน้าที่ รับ request จาก robot_server และ response True เมื่อทำสำเร็จ จากนั้นรับ รับตำแหน่งใหม่ 
