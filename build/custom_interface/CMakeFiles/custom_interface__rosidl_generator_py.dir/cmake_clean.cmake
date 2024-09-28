@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_s.c.o"
   "CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_change_mode_s.c.o.d"
+  "CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.o"
+  "CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_mode3_control_s.c.o.d"
   "CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.o"
   "CMakeFiles/custom_interface__rosidl_generator_py.dir/rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c.o.d"
   "rosidl_generator_py/custom_interface/libcustom_interface__rosidl_generator_py.pdb"

@@ -4,7 +4,8 @@
   "template_dir": "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource",
   "idl_tuples": [
     "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_adapter/custom_interface:srv/ChangeMode.idl",
-    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_adapter/custom_interface:srv/SetTaskspace.idl"
+    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_adapter/custom_interface:srv/SetTaskspace.idl",
+    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_adapter/custom_interface:srv/Mode3Control.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -84,6 +85,7 @@
     "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
     "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_adapter/custom_interface/srv/ChangeMode.idl",
     "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_adapter/custom_interface/srv/SetTaskspace.idl",
+    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_adapter/custom_interface/srv/Mode3Control.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

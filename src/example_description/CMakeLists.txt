@@ -35,6 +35,7 @@ install(PROGRAMS
   scripts/random_controller.py
   scripts/joint_sub_node.py
   scripts/robot_server.py
+  scripts/mode3_processor.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

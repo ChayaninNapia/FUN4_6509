@@ -18,6 +18,7 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/ChangeMode.srv"
   "srv/SetTaskspace.srv"
+  "srv/Mode3Control.srv"
   DEPENDENCIES geometry_msgs
 )
 

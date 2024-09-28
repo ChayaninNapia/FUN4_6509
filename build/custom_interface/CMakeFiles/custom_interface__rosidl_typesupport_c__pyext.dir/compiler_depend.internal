@@ -250,4 +250,9 @@ CMakeFiles/custom_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py
  /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__type_support.h
  /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__struct.h
  /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.h
+ /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/mode3_control__type_support.h
+ /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/mode3_control__struct.h
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h
+ /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.h
 

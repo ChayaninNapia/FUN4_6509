@@ -76,6 +76,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/random_controller.py"
     "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/joint_sub_node.py"
     "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/robot_server.py"
+    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/example_description/scripts/mode3_processor.py"
     )
 endif()
 

@@ -72,6 +72,9 @@ CMakeFiles/custom_interface: rosidl_cmake/srv/ChangeMode_Response.msg
 CMakeFiles/custom_interface: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface/srv/SetTaskspace.srv
 CMakeFiles/custom_interface: rosidl_cmake/srv/SetTaskspace_Request.msg
 CMakeFiles/custom_interface: rosidl_cmake/srv/SetTaskspace_Response.msg
+CMakeFiles/custom_interface: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface/srv/Mode3Control.srv
+CMakeFiles/custom_interface: rosidl_cmake/srv/Mode3Control_Request.msg
+CMakeFiles/custom_interface: rosidl_cmake/srv/Mode3Control_Response.msg
 CMakeFiles/custom_interface: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/custom_interface: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/custom_interface: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl

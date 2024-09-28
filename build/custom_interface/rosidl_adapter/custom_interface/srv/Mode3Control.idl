@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from custom_interface/srv/Mode3Control.srv
+// generated code does not contain a copyright notice
+
+
+module custom_interface {
+  module srv {
+    @verbatim (language="comment", text=
+      "Mode3Control.srv")
+    struct Mode3Control_Request {
+      @verbatim (language="comment", text=
+        "Request" "\n"
+        "Array of target joint positions")
+      sequence<double> target_joint_positions;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct Mode3Control_Response {
+      @verbatim (language="comment", text=
+        "Indicates if the mode 3 controller successfully moved to the target joint positions")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "Optional message providing more detail (success or failure)")
+      string message;
+    };
+  };
+};

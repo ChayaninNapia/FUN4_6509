@@ -8,13 +8,18 @@ import roboticstoolbox as rtb
 from math import pi
 import numpy as np
 from spatialmath import SE3
+from std_srvs.srv import SetBool
 
 class RandomTargetPublisher(Node):
     def __init__(self):
         super().__init__('random_target_publisher')
         
         self.target_pub = self.create_publisher(PoseStamped, '/target', 10)
-        self.timer = self.create_timer(1.5, self.publish_random_target)
+        self.timer = self.create_timer(5.0, self.publish_random_target)
+        self.timer.cancel()
+        self.srv = self.create_service(SetBool, 'activate_random', self.activate_random_target_callback)
+
+        self.active = False  # Flag to track if random publishing is active
         self.get_logger().info('Random Target Publisher has been started.')
 
         self.l1 = 0.2   # 200 / 1000
@@ -23,6 +28,32 @@ class RandomTargetPublisher(Node):
         self.l4 = 0.1   # 100 / 1000
         self.l5 = 0.28  # 280 / 1000
     
+    def activate_random_target_callback(self, request:SetBool.Request, response:SetBool.Response):
+        
+        if request.data:
+            if not self.active:
+                self.timer.reset()  # Start or restart the timer
+                self.active = True
+                response.success = True
+                response.message = 'Random target publishing started.'
+                self.get_logger().info(response.message)
+            else:
+                response.success = False
+                response.message = 'Random target publishing is already active.'
+                self.get_logger().warn(response.message)
+        else:  
+            if self.active:
+                self.timer.cancel()  # Stop the timer
+                self.active = False
+                response.success = True
+                response.message = 'Random target publishing stopped.'
+                self.get_logger().info(response.message)
+            else:
+                response.success = False
+                response.message = 'Random target publishing is already inactive.'
+                self.get_logger().warn(response.message)
+                
+        return response
         
     def publish_random_target(self):
         
@@ -36,21 +67,23 @@ class RandomTargetPublisher(Node):
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = "link_0"
 
-        
-        msg.pose.position.x = random.uniform(-(self.l3+self.l5), self.l3+self.l5)  # Random x position between -10 and 10
-        msg.pose.position.y = random.uniform(-(self.l3+self.l5), self.l3+self.l5)  # Random y position between -10 and 10
-        msg.pose.position.z = random.uniform(self.l1 - self.l3 - self.l5, self.l1 + self.l3 +self.l5)     # Random z position between 0 and 5
 
         # self.get_logger().info(f'Publishing random target: Position x={msg.pose.position.x}, y={msg.pose.position.y}, z={msg.pose.position.z}')
-
-        # Publish the message
-        if self.check_valid(msg):
-            print("pos valid UwU")
-            self.target_pub.publish(msg)
-            return
+        while True:
+            msg.pose.position.x = random.uniform(-(self.l3+self.l5), self.l3+self.l5)  
+            msg.pose.position.y = random.uniform(-(self.l3+self.l5), self.l3+self.l5)  
+            msg.pose.position.z = random.uniform(self.l1 - self.l3 - self.l5, self.l1 + self.l3 +self.l5)
+            if self.check_valid(msg):
+                break 
             
-        print("pos not valid : ")
+            
+        print("pos valid UwU")
+        self.target_pub.publish(msg)
+        
+        
         return
+    
+
         
     def check_valid(self,pos:PoseStamped):
         

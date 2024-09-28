@@ -2,13 +2,14 @@
 
 import rclpy
 from rclpy.node import Node
-from custom_interface.srv import ChangeMode, SetTaskspace
+from custom_interface.srv import ChangeMode, SetTaskspace, Mode3Control
 from geometry_msgs.msg import PoseStamped
 from sensor_msgs.msg import JointState
 from math import pi
 import roboticstoolbox as rtb
 from spatialmath import SE3
 import math
+from std_srvs.srv import SetBool
 
 
 class RobotServer(Node):
@@ -20,7 +21,9 @@ class RobotServer(Node):
         self.joint_pub = self.create_publisher(JointState, '/joint_states', 10)
         
         self.set_task_server = self.create_service(SetTaskspace, 'move_to_taskspace', self.handle_move_to_taskspace)
-        self.create_timer(0.01, self.sim_loop_move)
+        self.random_target_client = self.create_client(SetBool, 'activate_random')
+        self.mode3_controller_client = self.create_client(Mode3Control, 'mode_3_controller')
+        self.controller_timer = self.create_timer(0.01, self.sim_loop_move)
         
         self.q_d = [0,0,0]
         self.q = [0,0,0]
@@ -52,10 +55,14 @@ class RobotServer(Node):
 
             if self.mode == 3:
                 # If mode 1 (Inverse Pose Kinematics), start subscribing to /target topic
+                self.call_random_target_service(True)
                 self.start_target_subscription()
+                self.controller_timer.cancel()
             else:
                 # If not mode 1, stop subscribing to /target topic
+                self.call_random_target_service(False)
                 self.stop_target_subscription()
+                self.controller_timer.reset()
 
             response.success = True
         else:
@@ -75,6 +82,27 @@ class RobotServer(Node):
             self.destroy_subscription(self.target_sub)
             self.target_sub = None
             self.get_logger().info('Unsubscribed from /target topic.')
+            
+    def call_random_target_service(self, activate: bool):
+        """Request to activate or deactivate the random target publishing."""
+        if not self.random_target_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().warn('Random target service not available.')
+            return
+
+        req = SetBool.Request()
+        req.data = activate
+        future = self.random_target_client.call_async(req)
+        future.add_done_callback(self.handle_random_service_response)
+        
+    def handle_random_service_response(self, future):
+        try:
+            response = future.result()
+            if response.success:
+                self.get_logger().info(response.message)
+            else:
+                self.get_logger().warn(response.message)
+        except Exception as e:
+            self.get_logger().error(f'Failed to call random target service: {e}')
             
     def target_callback(self, msg: PoseStamped):
         
@@ -99,12 +127,39 @@ class RobotServer(Node):
             joint_msg.name = self.joint_names
             joint_msg.position = q_ik.tolist()
             
-            self.q_d = list(joint_msg.position)
-            print(self.q_d)
+            # self.q_d = list(joint_msg.position)
+            # print(self.q_d)
+            self.q_d = [float(joint) for joint in q_ik]
+            self.stop_target_subscription()
+            self.send_to_mode3_controller(self.q_d)
+            
             # self.get_logger().info("Published joint states for joint_1, joint_2, joint_3.")
         else:
             self.get_logger().warn("Inverse Kinematics did not find a solution for the received target.")
 
+    def send_to_mode3_controller(self, q_d):
+        """Send the target joint positions to Mode3Controller."""
+        if not self.mode3_controller_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().warn('Mode3Controller service not available.')
+            return
+        
+        req = Mode3Control.Request()
+        req.target_joint_positions = q_d  # Assuming this service accepts joint positions
+        
+        future = self.mode3_controller_client.call_async(req)
+        future.add_done_callback(self.handle_mode3_response)
+        
+    def handle_mode3_response(self, future):
+        try:
+            response = future.result()
+            if response.success:
+                self.get_logger().info('Mode3Controller successfully moved to the target position.')
+                self.start_target_subscription()  # Resubscribe to target
+            else:
+                self.get_logger().warn('Mode3Controller failed to move to the target position.')
+        except Exception as e:
+            self.get_logger().error(f'Failed to call Mode3Controller service: {e}')
+        
     def sim_loop_move(self):
         msg = JointState()
         msg.header.stamp = self.get_clock().now().to_msg()

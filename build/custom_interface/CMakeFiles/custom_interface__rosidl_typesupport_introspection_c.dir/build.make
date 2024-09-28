@@ -79,6 +79,7 @@ rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosi
 rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em
 rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interface/srv/ChangeMode.idl
 rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interface/srv/SetTaskspace.idl
+rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interface/srv/Mode3Control.idl
 rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -145,11 +146,17 @@ rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosi
 rosidl_typesupport_introspection_c/custom_interface/srv/detail/set_taskspace__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interface/srv/detail/set_taskspace__rosidl_typesupport_introspection_c.h
 
+rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__type_support.c: rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__type_support.c
 
 rosidl_typesupport_introspection_c/custom_interface/srv/detail/set_taskspace__type_support.c: rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interface/srv/detail/set_taskspace__type_support.c
+
+rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c: rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c
 
 CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__type_support.c.o: CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__type_support.c.o: rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__type_support.c
@@ -179,16 +186,32 @@ CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_types
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/set_taskspace__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_typesupport_introspection_c/custom_interface/srv/detail/set_taskspace__type_support.c -o CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/set_taskspace__type_support.c.s
 
+CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.o: CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.o: rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c
+CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.o: CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.o -MF CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.o.d -o CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.o -c /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c
+
+CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c > CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.i
+
+CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c -o CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.s
+
 # Object files for target custom_interface__rosidl_typesupport_introspection_c
 custom_interface__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__type_support.c.o" \
-"CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/set_taskspace__type_support.c.o"
+"CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/set_taskspace__type_support.c.o" \
+"CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.o"
 
 # External object files for target custom_interface__rosidl_typesupport_introspection_c
 custom_interface__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
 
 libcustom_interface__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__type_support.c.o
 libcustom_interface__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/set_taskspace__type_support.c.o
+libcustom_interface__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c.o
 libcustom_interface__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/build.make
 libcustom_interface__rosidl_typesupport_introspection_c.so: libcustom_interface__rosidl_generator_c.so
 libcustom_interface__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
@@ -201,7 +224,7 @@ libcustom_interface__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/
 libcustom_interface__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libcustom_interface__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librcutils.so
 libcustom_interface__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libcustom_interface__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libcustom_interface__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -214,6 +237,8 @@ CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/clean:
 
 CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__rosidl_typesupport_introspection_c.h
 CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interface/srv/detail/change_mode__type_support.c
+CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__rosidl_typesupport_introspection_c.h
+CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interface/srv/detail/mode3_control__type_support.c
 CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interface/srv/detail/set_taskspace__rosidl_typesupport_introspection_c.h
 CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interface/srv/detail/set_taskspace__type_support.c
 	cd /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface /home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles/custom_interface__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=$(COLOR)

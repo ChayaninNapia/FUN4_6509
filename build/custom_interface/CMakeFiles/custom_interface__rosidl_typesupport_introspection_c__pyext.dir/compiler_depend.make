@@ -248,8 +248,17 @@ CMakeFiles/custom_interface__rosidl_typesupport_introspection_c__pyext.dir/rosid
   rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.h \
   rosidl_generator_c/custom_interface/srv/detail/set_taskspace__type_support.h \
   rosidl_generator_c/custom_interface/srv/detail/set_taskspace__struct.h \
-  rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.h
+  rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.h \
+  rosidl_generator_c/custom_interface/srv/detail/mode3_control__type_support.h \
+  rosidl_generator_c/custom_interface/srv/detail/mode3_control__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.h
 
+
+rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
 rosidl_generator_c/custom_interface/srv/detail/set_taskspace__struct.h:
 
@@ -381,9 +390,13 @@ rosidl_generator_c/custom_interface/srv/detail/change_mode__struct.h:
 
 /usr/include/python3.10/exports.h:
 
+rosidl_generator_c/custom_interface/srv/detail/mode3_control__type_support.h:
+
 /usr/include/python3.10/fileobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/statx-generic.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
@@ -480,6 +493,8 @@ rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_i
 /usr/include/python3.10/namespaceobject.h:
 
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
+rosidl_generator_c/custom_interface/srv/detail/mode3_control__struct.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
 

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.c.o"
   "CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.c.o.d"
+  "CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.o"
+  "CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.o.d"
   "CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.c.o"
   "CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.c.o.d"
   "libcustom_interface__rosidl_generator_c.pdb"
@@ -10,10 +12,15 @@ file(REMOVE_RECURSE
   "rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.h"
   "rosidl_generator_c/custom_interface/srv/detail/change_mode__struct.h"
   "rosidl_generator_c/custom_interface/srv/detail/change_mode__type_support.h"
+  "rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c"
+  "rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.h"
+  "rosidl_generator_c/custom_interface/srv/detail/mode3_control__struct.h"
+  "rosidl_generator_c/custom_interface/srv/detail/mode3_control__type_support.h"
   "rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.c"
   "rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.h"
   "rosidl_generator_c/custom_interface/srv/detail/set_taskspace__struct.h"
   "rosidl_generator_c/custom_interface/srv/detail/set_taskspace__type_support.h"
+  "rosidl_generator_c/custom_interface/srv/mode3_control.h"
   "rosidl_generator_c/custom_interface/srv/set_taskspace.h"
 )
 

@@ -84,6 +84,7 @@ rosidl_generator_c/custom_interface/srv/change_mode.h: /opt/ros/humble/share/ros
 rosidl_generator_c/custom_interface/srv/change_mode.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/custom_interface/srv/change_mode.h: rosidl_adapter/custom_interface/srv/ChangeMode.idl
 rosidl_generator_c/custom_interface/srv/change_mode.h: rosidl_adapter/custom_interface/srv/SetTaskspace.idl
+rosidl_generator_c/custom_interface/srv/change_mode.h: rosidl_adapter/custom_interface/srv/Mode3Control.idl
 rosidl_generator_c/custom_interface/srv/change_mode.h: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_c/custom_interface/srv/change_mode.h: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_c/custom_interface/srv/change_mode.h: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -168,11 +169,26 @@ rosidl_generator_c/custom_interface/srv/detail/set_taskspace__struct.h: rosidl_g
 rosidl_generator_c/custom_interface/srv/detail/set_taskspace__type_support.h: rosidl_generator_c/custom_interface/srv/change_mode.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interface/srv/detail/set_taskspace__type_support.h
 
+rosidl_generator_c/custom_interface/srv/mode3_control.h: rosidl_generator_c/custom_interface/srv/change_mode.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interface/srv/mode3_control.h
+
+rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.h: rosidl_generator_c/custom_interface/srv/change_mode.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.h
+
+rosidl_generator_c/custom_interface/srv/detail/mode3_control__struct.h: rosidl_generator_c/custom_interface/srv/change_mode.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interface/srv/detail/mode3_control__struct.h
+
+rosidl_generator_c/custom_interface/srv/detail/mode3_control__type_support.h: rosidl_generator_c/custom_interface/srv/change_mode.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interface/srv/detail/mode3_control__type_support.h
+
 rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.c: rosidl_generator_c/custom_interface/srv/change_mode.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.c
 
 rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.c: rosidl_generator_c/custom_interface/srv/change_mode.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.c
+
+rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c: rosidl_generator_c/custom_interface/srv/change_mode.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c
 
 CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.c.o: CMakeFiles/custom_interface__rosidl_generator_c.dir/flags.make
 CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.c.o: rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.c
@@ -202,16 +218,32 @@ CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_in
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.c -o CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.c.s
 
+CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.o: CMakeFiles/custom_interface__rosidl_generator_c.dir/flags.make
+CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.o: rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c
+CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.o: CMakeFiles/custom_interface__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.o -MF CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.o.d -o CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.o -c /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c
+
+CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c > CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.i
+
+CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c -o CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.s
+
 # Object files for target custom_interface__rosidl_generator_c
 custom_interface__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.c.o" \
-"CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.c.o"
+"CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.c.o" \
+"CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.o"
 
 # External object files for target custom_interface__rosidl_generator_c
 custom_interface__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 libcustom_interface__rosidl_generator_c.so: CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.c.o
 libcustom_interface__rosidl_generator_c.so: CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.c.o
+libcustom_interface__rosidl_generator_c.so: CMakeFiles/custom_interface__rosidl_generator_c.dir/rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c.o
 libcustom_interface__rosidl_generator_c.so: CMakeFiles/custom_interface__rosidl_generator_c.dir/build.make
 libcustom_interface__rosidl_generator_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
 libcustom_interface__rosidl_generator_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
@@ -219,7 +251,7 @@ libcustom_interface__rosidl_generator_c.so: /opt/ros/humble/lib/libbuiltin_inter
 libcustom_interface__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libcustom_interface__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libcustom_interface__rosidl_generator_c.so: CMakeFiles/custom_interface__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libcustom_interface__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libcustom_interface__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/custom_interface__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -235,10 +267,15 @@ CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/c
 CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/detail/change_mode__functions.h
 CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/detail/change_mode__struct.h
 CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/detail/change_mode__type_support.h
+CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.c
+CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/detail/mode3_control__functions.h
+CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/detail/mode3_control__struct.h
+CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/detail/mode3_control__type_support.h
 CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.c
 CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/detail/set_taskspace__functions.h
 CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/detail/set_taskspace__struct.h
 CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/detail/set_taskspace__type_support.h
+CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/mode3_control.h
 CMakeFiles/custom_interface__rosidl_generator_c.dir/depend: rosidl_generator_c/custom_interface/srv/set_taskspace.h
 	cd /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface /home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/CMakeFiles/custom_interface__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/custom_interface__rosidl_generator_c.dir/depend

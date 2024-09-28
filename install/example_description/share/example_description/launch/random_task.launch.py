@@ -20,6 +20,7 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 import os
 import xacro    
+from launch.actions import ExecuteProcess
     
 def generate_launch_description():
     
@@ -62,6 +63,11 @@ def generate_launch_description():
         name='random_position_node',
         parameters=[]
     )
+    
+    activate_random_service = ExecuteProcess(
+        cmd=['ros2', 'service', 'call', '/activate_random', 'std_srvs/srv/SetBool', '{data: true}'],
+        output='screen'
+    )
 
     launch_description = LaunchDescription()
     
@@ -70,5 +76,5 @@ def generate_launch_description():
     launch_description.add_action(random_pos_node)
     launch_description.add_action(random_controller_node)
     # launch_description.add_action(joint_state_publisher_gui)
-    
+    launch_description.add_action(activate_random_service)
     return launch_description

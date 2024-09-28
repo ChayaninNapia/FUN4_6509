@@ -14,6 +14,7 @@
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/random_controller.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/joint_sub_node.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/robot_server.py
+/home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/mode3_processor.py
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/lib/example_description/cpp_node_test
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/config/my_display.rviz
 /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/example_description/share/example_description/config/display.rviz

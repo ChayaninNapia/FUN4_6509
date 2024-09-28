@@ -71,9 +71,11 @@ custom_interface__py/CMakeFiles/custom_interface__py: rosidl_generator_py/custom
 custom_interface__py/CMakeFiles/custom_interface__py: rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_c.c
 custom_interface__py/CMakeFiles/custom_interface__py: rosidl_generator_py/custom_interface/srv/_change_mode.py
 custom_interface__py/CMakeFiles/custom_interface__py: rosidl_generator_py/custom_interface/srv/_set_taskspace.py
+custom_interface__py/CMakeFiles/custom_interface__py: rosidl_generator_py/custom_interface/srv/_mode3_control.py
 custom_interface__py/CMakeFiles/custom_interface__py: rosidl_generator_py/custom_interface/srv/__init__.py
 custom_interface__py/CMakeFiles/custom_interface__py: rosidl_generator_py/custom_interface/srv/_change_mode_s.c
 custom_interface__py/CMakeFiles/custom_interface__py: rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c
+custom_interface__py/CMakeFiles/custom_interface__py: rosidl_generator_py/custom_interface/srv/_mode3_control_s.c
 
 rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -90,6 +92,7 @@ rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_f
 rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interface/srv/ChangeMode.idl
 rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interface/srv/SetTaskspace.idl
+rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interface/srv/Mode3Control.idl
 rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -165,6 +168,9 @@ rosidl_generator_py/custom_interface/srv/_change_mode.py: rosidl_generator_py/cu
 rosidl_generator_py/custom_interface/srv/_set_taskspace.py: rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interface/srv/_set_taskspace.py
 
+rosidl_generator_py/custom_interface/srv/_mode3_control.py: rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interface/srv/_mode3_control.py
+
 rosidl_generator_py/custom_interface/srv/__init__.py: rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interface/srv/__init__.py
 
@@ -174,6 +180,9 @@ rosidl_generator_py/custom_interface/srv/_change_mode_s.c: rosidl_generator_py/c
 rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c: rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c
 
+rosidl_generator_py/custom_interface/srv/_mode3_control_s.c: rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interface/srv/_mode3_control_s.c
+
 custom_interface__py: custom_interface__py/CMakeFiles/custom_interface__py
 custom_interface__py: rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_c.c
 custom_interface__py: rosidl_generator_py/custom_interface/_custom_interface_s.ep.rosidl_typesupport_fastrtps_c.c
@@ -181,6 +190,8 @@ custom_interface__py: rosidl_generator_py/custom_interface/_custom_interface_s.e
 custom_interface__py: rosidl_generator_py/custom_interface/srv/__init__.py
 custom_interface__py: rosidl_generator_py/custom_interface/srv/_change_mode.py
 custom_interface__py: rosidl_generator_py/custom_interface/srv/_change_mode_s.c
+custom_interface__py: rosidl_generator_py/custom_interface/srv/_mode3_control.py
+custom_interface__py: rosidl_generator_py/custom_interface/srv/_mode3_control_s.c
 custom_interface__py: rosidl_generator_py/custom_interface/srv/_set_taskspace.py
 custom_interface__py: rosidl_generator_py/custom_interface/srv/_set_taskspace_s.c
 custom_interface__py: custom_interface__py/CMakeFiles/custom_interface__py.dir/build.make

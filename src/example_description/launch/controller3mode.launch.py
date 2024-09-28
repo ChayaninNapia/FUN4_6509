@@ -60,12 +60,19 @@ def generate_launch_description():
         name='random_position_node',
         parameters=[]
     )
+    
+    mode3_processor_node = Node(
+        package='example_description',  
+        executable='mode3_processor.py',  
+    )
+    
 
     launch_description = LaunchDescription()
     
     launch_description.add_action(rviz)
     launch_description.add_action(robot_state_publisher)
-    # launch_description.add_action(random_pos_node)
+    launch_description.add_action(random_pos_node)
+    launch_description.add_action(mode3_processor_node)
     # launch_description.add_action(robot_server_node)
     # launch_description.add_action(joint_state_publisher_gui)
     

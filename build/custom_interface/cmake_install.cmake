@@ -364,6 +364,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interface/srv" TYPE FILE FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_adapter/custom_interface/srv/Mode3Control.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interface/srv" TYPE FILE FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface/srv/ChangeMode.srv")
 endif()
 
@@ -385,6 +389,18 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interface/srv" TYPE FILE FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_cmake/srv/SetTaskspace_Response.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interface/srv" TYPE FILE FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface/srv/Mode3Control.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interface/srv" TYPE FILE FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_cmake/srv/Mode3Control_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_interface/srv" TYPE FILE FILES "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/custom_interface/rosidl_cmake/srv/Mode3Control_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
