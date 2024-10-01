@@ -14,7 +14,7 @@ code .bashrc
 ```
 เพิ่มโค้ดนี้ลงไปในบรรทัดสุดท้าย แทนที่ your_workspace ด้วย ที่อยู่ของ workspace ของคุณ
 ```sh
-source ~/your_workspace/install/setup.bash
+source ~/FUN4_6509/install/setup.bash
 ```
 เปิด terminal ใหม่ แล้ว cd ไปที่ workspace จากนั้นทำการ source ไฟล์
 ```sh
