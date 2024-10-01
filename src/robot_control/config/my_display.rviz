@@ -146,8 +146,8 @@ Visualization Manager:
         Value: /visualization_marker
       Value: true
     - Alpha: 1
-      Axes Length: 1
-      Axes Radius: 0.10000000149011612
+      Axes Length: 0.30000001192092896
+      Axes Radius: 0.029999999329447746
       Class: rviz_default_plugins/Pose
       Color: 255; 25; 0
       Enabled: true
@@ -156,7 +156,7 @@ Visualization Manager:
       Name: Pose
       Shaft Length: 1
       Shaft Radius: 0.05000000074505806
-      Shape: Arrow
+      Shape: Axes
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -166,8 +166,8 @@ Visualization Manager:
         Value: /target
       Value: true
     - Alpha: 1
-      Axes Length: 1
-      Axes Radius: 0.10000000149011612
+      Axes Length: 0.30000001192092896
+      Axes Radius: 0.029999999329447746
       Class: rviz_default_plugins/Pose
       Color: 0; 255; 0
       Enabled: true
@@ -176,7 +176,7 @@ Visualization Manager:
       Name: Pose
       Shaft Length: 1
       Shaft Radius: 0.05000000074505806
-      Shape: Arrow
+      Shape: Axes
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -231,25 +231,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 3.7701003551483154
+      Distance: 2.4243972301483154
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.05384599044919014
-        Y: -0.1138533353805542
-        Z: 0.6544304490089417
+        X: -0.04211026430130005
+        Y: 0.037634074687957764
+        Z: 0.3295862674713135
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8153972625732422
+      Pitch: 0.38539767265319824
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.9753655195236206
+      Yaw: 1.9553667306900024
     Saved: ~
 Window Geometry:
   Displays:
