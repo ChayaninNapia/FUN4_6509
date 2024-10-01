@@ -163,7 +163,7 @@ ros2 launch robot_control robot_bringup.launch.py mode:=2
 ### 1. mode 1 Inverse Pose Kinematics (IPK)
 เปลี่ยนเป็นโหมด 1
 ```sh
-ros2 service call /change_mode custom_interface/srv/ChangeMode "mode: 1" 
+ros2 service call /change_mode robot_action/srv/ChangeMode "mode: 1"  
 ```
 เรียก service เพื่อระบุ task ที่ต้องการ ตัวอย่าง
 
@@ -190,16 +190,17 @@ ros2 run tf2_ros tf2_echo link_0 end_effector
 ### 2. mode 2 Teleoperation
 เปลี่ยนเป็นโหมด 2
 ```sh
-ros2 service call /change_mode custom_interface/srv/ChangeMode "{mode: 2}" 
+#Teleoperation base reference
+ros2 service call /change_mode robot_action/srv/ChangeMode "mode: 20"
+or
+#Teleoperation end_effector reference
+ros2 service call /change_mode robot_action/srv/ChangeMode "mode: 21" 
 ```
-เลือกโหมด reference 1 base frame / 2 end-effector frame
-```sh
- ros2 service call /mode2_dlc custom_interface/srv/ChangeModeDlc "{mode: 1}"
-```
+
 เปิด หน้าต่างใหม่ รัน teleop_twist_keyboard
-
+```sh
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
-
+```
 
 กด shift ค้างแล้วตามด้วย ปุ่มใน Holonomic mode 
 เมื่อหุ่นขยับไปจนใกล้ จะเกิด ingularity ที่หน้าterminal ของ launch ไฟล์ จะแสดงข้อความเตือน และ ต้อง เรียก service /sethome และตั้งโหมดใหม่อีกครั้ง
@@ -213,8 +214,6 @@ ros2 service call /sethome_service std_srvs/srv/SetBool "data: false"
 ### 3. mode 3  Auto
 
 ```sh
-ros2 service call /change_mode custom_interface/srv/ChangeMode "{mode: 3}" 
+ros2 service call /change_mode robot_action/srv/ChangeMode "mode: 3" 
 ```
-เมื่อเข้าโหมดนี้ จะมี โหนดที่ชื่อ /mode_3_controller_node ทำหน้าที่ รับ request จาก robot_server และ response True เมื่อทำสำเร็จ จากนั้นรับ รับตำแหน่งใหม่ 
 
-ในไฟล์สคริป ของ mode_3_controller_node เมื่อ ไปถึงตำแหน่งที่ต้องการจะ ปิด timer ของ control-loop และเปิดเมื่อ มีrequest จาก robot_server โดย srv ที่ส่งไปคือ Mode3Control.srv ซึ่ง request ไปในรูปของ list ของ float configuration ถึง ถูกแปลง จาก taskspace โดย robot_sever node
