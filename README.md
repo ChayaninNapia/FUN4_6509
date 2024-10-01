@@ -136,9 +136,9 @@ ros2 launch robot_control robot_bringup.launch.py mode:=1
 ```
 เมื่อรันไฟล์นี้ โหนดที่ชื่อ /random_position_node จะทำการสุ่มตำแหน่งและ publish topic /target: geometry_msgs/msg/PoseStamped ออกมาทุกๆ 5 วินาที
 
-เช็ค ข้อมูลของโนหด /random_position_node
+เช็ค ข้อมูลของโนหด /random_target_publisher
  ```sh
-ros2 node info /random_position_node
+ros2 node info /random_target_publisher
 ```
 ดูข้อมูลที่ publish ออกมา
 ```sh
