@@ -208,12 +208,13 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 [robot_server.py-5] [WARN] [1727524432.934874109] [robot_server]: Manipulability is too low or NaN: 0.000779403431579281. Approaching singularity!
 [robot_server.py-5] [WARN] [1727524432.935113762] [robot_server]: please set home and set mode again
 ```
-
-ros2 service call /sethome_service std_srvs/srv/SetBool "data: false" 
+```sh
+ros2 service call /sethome std_srvs/srv/SetBool "{data: false}" 
+```
 
 ### 3. mode 3  Auto
 
 ```sh
 ros2 service call /change_mode robot_action/srv/ChangeMode "mode: 3" 
 ```
-
+โครงสร้างของโหมด 3
