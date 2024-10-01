@@ -217,4 +217,9 @@ ros2 service call /sethome std_srvs/srv/SetBool "{data: false}"
 ```sh
 ros2 service call /change_mode robot_action/srv/ChangeMode "mode: 3" 
 ```
-โครงสร้างของโหมด 3
+ลำดับการทำงานของ โหมด 3
+1. /robot_server_node request ตำแหน่งจาก /random_target_publisher
+2. /random_target_publisher response ตำแหน่ง เป็น PoseStamped
+3. /robot_server_node ส่ง goal ไปที่ /robot_action_server_node
+4. เมื่อ /robot_action_server_node ทำงานสำเร็จ จะส่ง result ไปที่ /robot_server_node
+5. /robot_server_node วนลูป request ตำแหน่งใหม่ เมื่อมีการเปลี่ยนโหลดจะ cancel goal ปัจจุบัน
