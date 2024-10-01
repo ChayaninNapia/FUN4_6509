@@ -168,14 +168,14 @@ ros2 service call /change_mode robot_action/srv/ChangeMode "mode: 1"
 เรียก service เพื่อระบุ task ที่ต้องการ ตัวอย่าง
 
 ```sh
-ros2 service call /move_to_taskspace custom_interface/srv/SetTaskspace "{x: 0.28, y: -0.1, z: 0.2}"
+ros2 service call /set_taskspace robot_action/srv/SetTaskspace "{x: 0.28, y: -0.1, z: 0.2}"
 
 ```
 
 เมื่อtaskไม่ได้อยู่ใน workspace จะ response success=False
 
 ```sh
-ros2 service call /move_to_taskspace custom_interface/srv/SetTaskspace "{x: 0.28, y: -0.1, z: 1.2}"
+ros2 service call /set_taskspace robot_action/srv/SetTaskspace "{x: 0.28, y: -0.1, z: 1.2}"
 waiting for service to become available...
 requester: making request: custom_interface.srv.SetTaskspace_Request(x=0.28, y=-0.1, z=1.2)
 
