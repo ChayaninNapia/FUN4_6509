@@ -1,9 +1,0 @@
-{
-  "package_name": "custom_interface",
-  "non_idl_tuples": [
-    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface:srv/ChangeMode.srv",
-    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface:srv/ChangeModeDlc.srv",
-    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface:srv/SetTaskspace.srv",
-    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/custom_interface:srv/Mode3Control.srv"
-  ]
-}
