@@ -124,7 +124,7 @@ Verification :
 ### plot workpace with rviz marker
 
 ```sh
-ros2 launch example_description workspace_plot_display.launch.py
+ros2 launch robot_control robot_bringup.launch.py mode:=0
 ```
 เมื่อ run ไฟล์นี้ หุ่นยนต์จะค่อยๆพลอต workspace outter bound ที่หุ่นยนต์สามารถขยับไปได้ ลักษณะเป็นทรงกลม 
 
@@ -132,7 +132,7 @@ ros2 launch example_description workspace_plot_display.launch.py
 
  ### 2.สร้าง node สําหรับสุ่มเป้าหมายตําแหน่งปลายมือภายใน workspace ของแขนกลใน topic ที่มีชื่อว่า /target (msg type: PoseStamped) และแสดงผลผ่าน RVIZ2 (0.5 คะแนน)
  ```sh
-ros2 launch example_description random_task.launch.py 
+ros2 launch robot_control robot_bringup.launch.py mode:=1
 ```
 เมื่อรันไฟล์นี้ โหนดที่ชื่อ /random_position_node จะทำการสุ่มตำแหน่งและ publish topic /target: geometry_msgs/msg/PoseStamped ออกมาทุกๆ 5 วินาที
 
@@ -146,7 +146,7 @@ ros2 topic echo /target
 ````
 ### 3.ส่งค่าตําแหน่งปลายมือผ่าน topic /end_effector (msg type: PoseStamped) และแสดงผลผ่าน RVIZ2
  ```sh
-ros2 launch example_description end_effector_pos.launch.py 
+ros2 launch robot_control robot_bringup.launch.py mode:=1 
 ```
 เมื่อรันไฟล์นี้จะปรากฏหน้าต่าง gui และ rviz โดยมี node /roint_sub_node sub tf ของ end-effector เทียบ base 
 
@@ -158,7 +158,7 @@ ros2 topic echo /end_effector
 ## Part 2: Controller
 
 ```sh
-ros2 launch example_description controller3mode.launch.py 
+ros2 launch robot_control robot_bringup.launch.py mode:=2
 ```
 ### 1. mode 1 Inverse Pose Kinematics (IPK)
 เปลี่ยนเป็นโหมด 1
