@@ -1,9 +1,0 @@
-#Goal
-int16 task_type # 0 for configuration space, 1 for task space, 3 velocity_control_base 4 velocity_control_end_effector
-float64[] task
----
-# Result
-bool success
----
-# Feedback
-float64[] current_q

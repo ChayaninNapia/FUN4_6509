@@ -1,8 +1,0 @@
-# Request: 
-#mode 1 : Inverse Pose Kinematics
-#mode 20 : Teleoperation base reference
-#mode 21 : Teleoperation end_effector reference
-#mode 3 : Auto
-
-int32 mode
-

@@ -1,9 +1,0 @@
-{
-  "package_name": "robot_action",
-  "non_idl_tuples": [
-    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/robot_action:action/PoseGoal.action",
-    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/robot_action:srv/GenTarget.srv",
-    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/robot_action:srv/ChangeMode.srv",
-    "/home/chayanin09/Documents/FUN4_ws/FUN4_6509/src/robot_action:srv/SetTaskspace.srv"
-  ]
-}
