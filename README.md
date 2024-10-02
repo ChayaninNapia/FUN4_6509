@@ -130,7 +130,7 @@ Verification :
    0         0         0         1       
 ```
 
-### plot workpace with rviz marker
+### 1.1 plot workpace with rviz marker
 
 ```sh
 ros2 launch robot_control robot_bringup.launch.py mode:=0
@@ -139,7 +139,7 @@ ros2 launch robot_control robot_bringup.launch.py mode:=0
 
  <img src="src/img/workspace_plot1.png" alt="Alt Text for the Image" width="500" />
 
- ### 2.สร้าง node สําหรับสุ่มเป้าหมายตําแหน่งปลายมือภายใน workspace ของแขนกลใน topic ที่มีชื่อว่า /target (msg type: PoseStamped) และแสดงผลผ่าน RVIZ2 (0.5 คะแนน)
+ ### 1.2 สร้าง node สําหรับสุ่มเป้าหมายตําแหน่งปลายมือภายใน workspace ของแขนกลใน topic ที่มีชื่อว่า /target (msg type: PoseStamped) และแสดงผลผ่าน RVIZ2 (0.5 คะแนน)
  ```sh
 ros2 launch robot_control robot_bringup.launch.py mode:=1
 ```
