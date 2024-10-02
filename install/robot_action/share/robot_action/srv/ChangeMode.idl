@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from robot_action/srv/ChangeMode.srv
+// generated code does not contain a copyright notice
+
+
+module robot_action {
+  module srv {
+    @verbatim (language="comment", text=
+      " Request: " "\n"
+      "mode 1 : Inverse Pose Kinematics" "\n"
+      "mode 20 : Teleoperation base reference" "\n"
+      "mode 21 : Teleoperation end_effector reference" "\n"
+      "mode 3 : Auto")
+    struct ChangeMode_Request {
+      int32 mode;
+    };
+    struct ChangeMode_Response {
+      @verbatim (language="comment", text=
+        "Response:")
+      boolean success;
+    };
+  };
+};

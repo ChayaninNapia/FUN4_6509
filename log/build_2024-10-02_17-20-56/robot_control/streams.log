@@ -1,0 +1,40 @@
+[0.007s] Invoking command in '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/robot_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/robot_control -- -j20 -l20
+[0.034s] Invoked command in '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/robot_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/robot_control -- -j20 -l20
+[0.071s] Invoking command in '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/robot_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/robot_control
+[0.076s] -- Install configuration: ""
+[0.076s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/lib/robot_control/robot_action_server.py
+[0.076s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/lib/robot_control/random_target.py
+[0.076s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/lib/robot_control/robot_server.py
+[0.076s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/lib/robot_control/workspace_move.py
+[0.076s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/lib/robot_control/workspace_plot.py
+[0.076s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/config
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/config/my_display.rviz
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/config/display.rviz
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/launch
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/launch/robot_bringup.launch.py
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/meshes
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/meshes/link_2.stl
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/meshes/link_0.stl
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/meshes/link_3.stl
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/meshes/end_effector.stl
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/meshes/link_1.stl
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/urdf
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/urdf/my_robot.urdf
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/urdf/my-robot.xacro
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/urdf/test.urdf
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/ament_index/resource_index/package_run_dependencies/robot_control
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/ament_index/resource_index/parent_prefix_path/robot_control
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/environment/ament_prefix_path.sh
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/environment/ament_prefix_path.dsv
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/environment/path.sh
+[0.077s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/environment/path.dsv
+[0.078s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/local_setup.bash
+[0.078s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/local_setup.sh
+[0.078s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/local_setup.zsh
+[0.078s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/local_setup.dsv
+[0.078s] -- Installing: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/package.dsv
+[0.078s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/ament_index/resource_index/packages/robot_control
+[0.078s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/cmake/robot_controlConfig.cmake
+[0.078s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/cmake/robot_controlConfig-version.cmake
+[0.078s] -- Up-to-date: /home/chayanin09/Documents/FUN4_ws/FUN4_6509/install/robot_control/share/robot_control/package.xml
+[0.078s] Invoked command in '/home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/robot_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/chayanin09/Documents/FUN4_ws/FUN4_6509/build/robot_control

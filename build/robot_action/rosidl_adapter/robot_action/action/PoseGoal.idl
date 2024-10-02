@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from robot_action/action/PoseGoal.action
+// generated code does not contain a copyright notice
+
+
+module robot_action {
+  module action {
+    @verbatim (language="comment", text=
+      "Goal")
+    struct PoseGoal_Goal {
+      @verbatim (language="comment", text=
+        "0 for configuration space, 1 for task space, 3 velocity_control_base 4 velocity_control_end_effector")
+      int16 task_type;
+
+      sequence<double> task;
+    };
+    @verbatim (language="comment", text=
+      "Result")
+    struct PoseGoal_Result {
+      boolean success;
+    };
+    @verbatim (language="comment", text=
+      "Feedback")
+    struct PoseGoal_Feedback {
+      sequence<double> current_q;
+    };
+  };
+};

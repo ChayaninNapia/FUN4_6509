@@ -1,0 +1,8 @@
+# Request
+bool trigger 
+
+---
+
+# Response
+geometry_msgs/PoseStamped taskspace
+
