@@ -1,14 +1,21 @@
 # FUN4_6509
 ## Part 1: Setup Environment
-download หรือ clone workspace ไปที่ workspace ของคุณ
+cd ไปที่ home
 ```sh
 git clone https://github.com/ChayaninNapia/FUN4_6509
 ```
 ลบ โฟลเดอร์  build, install, log จากนั้นทำการ build file ใหม่ ด้วยคำสั่ง colcon
+
+```sh
+cd FUN4_6509/
+```
 ```sh
 colcon build
 ```
 cd ไปที่ home จากนั้นแก้ไข ไฟล์ bashrc เพื่อ source ไฟล์
+```sh
+cd
+```
 ```sh
 code .bashrc
 ```
@@ -19,6 +26,8 @@ source ~/FUN4_6509/install/setup.bash
 เปิด terminal ใหม่ แล้ว cd ไปที่ workspace จากนั้นทำการ source ไฟล์
 ```sh
 code .bashrc
+```
+```sh
 source install/setup.bash
 ```
 
@@ -134,7 +143,7 @@ ros2 launch robot_control robot_bringup.launch.py mode:=0
  ```sh
 ros2 launch robot_control robot_bringup.launch.py mode:=1
 ```
-เมื่อรันไฟล์นี้ โหนดที่ชื่อ /random_position_node จะทำการสุ่มตำแหน่งและ publish topic /target: geometry_msgs/msg/PoseStamped ออกมาทุกๆ 5 วินาที
+เมื่อรันไฟล์นี้ โหนดที่ชื่อ /random_position_node จะทำการสุ่มตำแหน่งและ publish topic /target: geometry_msgs/msg/PoseStamped ออกมาทุกๆ 1 วินาที
 
 เช็ค ข้อมูลของโนหด /random_target_publisher
  ```sh
@@ -176,6 +185,8 @@ ros2 service call /set_taskspace robot_action/srv/SetTaskspace "{x: 0.28, y: -0.
 
 ```sh
 ros2 service call /set_taskspace robot_action/srv/SetTaskspace "{x: 0.28, y: -0.1, z: 1.2}"
+```
+```sh
 waiting for service to become available...
 requester: making request: custom_interface.srv.SetTaskspace_Request(x=0.28, y=-0.1, z=1.2)
 
@@ -191,9 +202,12 @@ ros2 run tf2_ros tf2_echo link_0 end_effector
 เปลี่ยนเป็นโหมด 2
 ```sh
 #Teleoperation base reference
+```sh
 ros2 service call /change_mode robot_action/srv/ChangeMode "mode: 20"
+```
 or
 #Teleoperation end_effector reference
+```sh
 ros2 service call /change_mode robot_action/srv/ChangeMode "mode: 21" 
 ```
 
