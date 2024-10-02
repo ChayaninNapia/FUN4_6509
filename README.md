@@ -25,7 +25,7 @@ source ~/FUN4_6509/install/setup.bash
 ```
 เปิด terminal ใหม่ แล้ว cd ไปที่ workspace จากนั้นทำการ source ไฟล์
 ```sh
-code .bashrc
+cd FUN4_6509/
 ```
 ```sh
 source install/setup.bash
