@@ -200,8 +200,9 @@ ros2 run tf2_ros tf2_echo link_0 end_effector
 ```
 ### 2. mode 2 Teleoperation
 เปลี่ยนเป็นโหมด 2
-```sh
+
 #Teleoperation base reference
+
 ```sh
 ros2 service call /change_mode robot_action/srv/ChangeMode "mode: 20"
 ```
